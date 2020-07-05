@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LBILA Mobile Memo</title>
+    <style type="text/css">    
+    body{
+         -webkit-text-size-adjust: 100%;
+         
+         }
+　 input,select,textarea{
+          background: #FFEEFF;
+         }
+    input,select,textarea,button{
+          font-size:16px;
+         }
+     h1{
+          text-align:center;
+          line-height:5px;
+       }
+     h2{
+          text-align:right;
+           line-height:5px;
+       }
+    </style>
+
+
+</head>
+<body>
+
+
+<h1>
+<font size="6" color="#666666">モバイルメモ</font>
+</h1>
+<h2>
+<font size="1" color="#aaaaaa">LBILA Mobile Memo for LIFF β Edition</font>
+</h2>
+
+
+
+<!--
+<form method=”post” action=”https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec”>
+-->
+<div class="container">
+    <!--
+    <form class="formmemo" id="myForm" onsubmit="return false;">
+    -->
+    <form class="formmemo" id="myForm"onsubmit="myFormSubmit(this);">  
+        <div class="formmemo-group">
+            <label class="formmemo-label" for="input_customername">顧客名</label>
+           
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:10%;">
+                <textarea name="customername" cols="35" rows="1" id="input_customername" placeholder="例：コロッケそば"></textarea>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div class="formmemo-group">
+            <label class="formmemo-label" for="input_hearing">ヒヤリング内容</label>
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:5%;">
+                <textarea name="hearing" cols="35" rows="10" id="input_hearing" placeholder="例：IoTセンサーの情報をLINE通知できないかの相談"></textarea>
+               </div>
+            </div>
+        </div>
+        
+        <div class="formmemo-group">
+            <label class="formmemo-label" for="input_memo">メモ</label>
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:5%;">
+                <textarea name="memo" cols="35" rows="10" id="input_memo" placeholder="例：LINE botとLIFFによるLINE内アプリの技術が必要"></textarea>
+               </div>
+            </div>
+        </div>
+        
+        <div class="formmemo-group">
+                         <label class="formmemo-label">メモ分類</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="category" value="テレワーク" required>テレワーク
+                        </label>
+                    
+                        <label class="radio-inline">
+                            <input type="radio" name="category" value="DX（IoT/AI/ロボット/etc）" required>DX（IoT/AI/ロボット/etc）
+                        </label>
+                       <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="category" value="アフター/ウィズ コロナ" required>アフター/ウィズ コロナ
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="category" value="アイディア/その他" required>アイディア/その他
+                        </label>
+                    </div>
+         </div>
+        <!--
+        <div class="formmemo-group">
+            <label class="formmemo-label">メモ分類</label>
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:10%;">
+                <select name="category" id="formmemo-select" class="formmemo-selectpicker" data-live-search="true" style="height:35px;width:300px;">
+                  <option selected>テレワーク</option>
+                  <option>DX（IoT/AI/ロボット/etc）</option>
+                  <option>アフター/ウィズ コロナ</option>
+                  <option>アイディア/その他</option>
+                </select>
+                </div>
+            </div>
+        </div>
+        -->
+        <br>
+         <div class="formmemo-group">
+            <div class="formmemo-button">
+                 
+                 <!--
+                 <input type="button" name="enyry" value="登録" onClick="google.script.run.withSuccessHandler(afterentry).myFunction(this.parentNode);">
+                  <input type="submit" value="登録する">  
+                 -->
+                
+                 <div style="margin-left:0%;margin-right:10%;">
+                     <input type="submit" style="width:100%;padding:10px;font-size:30px;background-color:#008000;color:#FFFFFF" value="登録する" />
+                 </div>
+            </div>
+        </div>
+        
+        <br>
+    </form>
+
+<!--
+<i id="processing" class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+-->
+</div>
+<!--
+</form>
+-->
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+     
+<script type="text/javascript">
+
+
+
+
+//
+//LIFF 初期化
+//
+
+
+document.addEventListener("DOMContentLoaded", () => {
+      
+       liff
+        .init({
+            liffId: '1654390065-9nadRnPq'
+        })
+        .then(() => {
+            //if (!liff.isInClient() && !liff.isLoggedIn()) {
+                //window.alert("LINEアカウントにログインしてください。");
+                //liff.login();
+                //liff.closeWindow(); 
+                
+            //}
+            //window.alert("LIFF.isInClient()---> " + liff.isInClient());
+            
+            
+        })
+        .catch((err) => {
+            window.alert("LIFF INIT ERROR");
+        });
+        
+         
+    });
+   
+
+
+
+//
+// 入力フォームをGAS側メソッドmyFunctionに引き渡す
+//
+function myFormSubmit(formObject) {
+      
+      google.script.run.withSuccessHandler(afterentry).myFunction(formObject);
+      
+      //google.script.run.myFunction(formObject);    
+      //sendMessages('登録しました');
+  
+      //liff.closeWindow();  
+      
+      
+    }
+//
+//GAS サーバサイドメソッドへの送信
+function send(e){
+  //データを送信して結果を受け取り、errorhandlmsgへ渡す
+  //google.script.run.withSuccessHandler(errorhandlmsg).myFunction();
+  
+  
+  //google.script.run
+  //      .withSuccessHandler(afterentry)
+  //      .myFunction(e);
+  
+  
+}
+//
+//サーバサイド処理後の結果取得
+//
+function afterentry(msg){
+  var result = JSON.parse(msg);
+ 
+  
+  
+  //alert('liff.isClient()---> ' + liff.isInClient());
+          //liff.closeWindow(); 
+  //alert('liff.getOS()---> ' + liff.getOS());
+  
+  
+  if(result == 'ok')
+  {
+     alert('登録されました　\n\n\n' + '右上の「☓」をタップして閉じてください');
+  }
+  else{
+  
+     alert('登録でエラーが発生しました　\n\n\n' + '右上の「☓」をタップして閉じてください');
+  }
+  
+  
+  
+  //sendMessages('登録しました');
+  
+  //liff.closeWindow();
+  
+  
+   //var msg;
+   //if(liff.isInClient())
+   //{
+   //   alert("LINE内ブラウザ");
+   //liff.closeWindow(); 
+   //}
+   //else
+   //{
+   //   alert("LINE外ブラウザ");
+   //   
+   //}
+  
+  
+}
+function sendMessages(text) {
+    liff.sendMessages([{
+        'type': 'text',
+        'text': text
+    }]).then(function () {
+        liff.closeWindow();
+    }).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
