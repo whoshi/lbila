@@ -192,7 +192,7 @@ function myFormSubmit(formObject) {
     　var customername = document.getElementById("input_customername").value;
       var hearing = document.getElementById("input_hearing").value;
       var memo = document.getElementById("input_memo").value;
-      var category = document.getElementById("input_customername").value;
+      var category = document.getElementById("input_category").value;
       var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
           
@@ -269,19 +269,17 @@ function afterentry(msg){
 }
 function sendMessages(text) {
     window.alert('LIFF.sendMessage In ');   
-    liff.sendMessages([
-    {
-       type: 'text',
-       text: 'Hello, World!'
-    }
-    ])
-     .then(() => {
-                   window.alert('LIFF.sendMessage OK ');    
-                   liff.closeWindow();
-     })
-     .catch((err) => {
-                   window.alert('Failed to send message ' + error);
-     });
+   function sendMessages(text) {
+    liff.sendMessages([{
+        'type': 'text',
+        'text': text
+    }]).then(function () {
+        liff.closeWindow();
+    }).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
+
 
     window.close();
     
