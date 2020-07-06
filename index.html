@@ -179,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
          
     });
 document.getElementById('input_send').addEventListener('click', function () {
+                /*
                 var customername = document.getElementById("input_customername").value;
                 var hearing = document.getElementById("input_hearing").value;
                 var memo = document.getElementById("input_memo").value;
@@ -190,7 +191,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
                 inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
                 window.alert("LIFF.isInClient()---> " + liff.isInClient());
-    
+                */
                 liff.sendMessages([
                     {
                         type:'text',
@@ -199,14 +200,14 @@ document.getElementById('input_send').addEventListener('click', function () {
                 ])
                 .then(() => {
                     liff.closeWindow();
-                    //window.close();
+                    window.close();
                 })
                 .catch((err) => {
                     window.alert('Failed to send message ' + err);
                     liff.closeWindow();
-                    
+                    window.close();
                 });
-                window.close();
+                
             }); 
 
 
