@@ -169,10 +169,12 @@ function initializeLiff(liffId) {
             //if (!liff.isInClient() && !liff.isLoggedIn()) {
             //    window.alert("LINEアカウントにログインしてください。");
             //    liff.login({redirectUri: location.href});
+              alert('liff.init --->  OK' );
             }
         })
         .catch((err) => {
             //console.log('LIFF Initialization failed ', err);
+              alert('liff.init --->  Error' );
         });
 }
 /*
