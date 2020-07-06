@@ -141,10 +141,7 @@
 <!--
 </form>
 -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+  
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
      
 <script type="text/javascript">
@@ -155,33 +152,8 @@
 //
 //LIFF 初期化
 //
-$(document).ready(function () {
-    // liffId: LIFF URL "https://liff.line.me/xxx"のxxxに該当する箇所
-    // LINE DevelopersのLIFF画面より確認可能
-    alert('Doc ready );
-    var liffId = "1654390065-9nadRnPq";
-    initializeLiff(liffId);
-})
 
-function initializeLiff(liffId) {
-    liff
-        .init({
-            liffId: liffId
-        })
-        .then(() => {
-            // Webブラウザからアクセスされた場合は、LINEにログインする
-            //if (!liff.isInClient() && !liff.isLoggedIn()) {
-            //    window.alert("LINEアカウントにログインしてください。");
-            //    liff.login({redirectUri: location.href});
-              alert('liff.init --->  OK' );
-            }
-        })
-        .catch((err) => {
-            //console.log('LIFF Initialization failed ', err);
-              alert('liff.init --->  Error' );
-        });
-}
-/*
+
 document.addEventListener("DOMContentLoaded", () => {
       
        liff
@@ -190,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(() => {
             //if (!liff.isInClient() && !liff.isLoggedIn()) {
-                //window.alert("LINEアカウントにログインしてください。");
+                //window.alert("LINEアカウントにログインしてください。");　
                 //liff.login();
                 //liff.closeWindow(); 
                 
@@ -205,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
          
     });
- */  
+ 
 
 
 
@@ -222,6 +194,7 @@ function myFormSubmit(formObject) {
           //liff.closeWindow(); 
       alert('liff.getOS()---> ' + liff.getOS());
       liff.closeWindow();  
+    　window.close();
       
       
     }
