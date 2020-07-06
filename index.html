@@ -267,8 +267,8 @@ function sendMessages(text) {
   }
 ])
   .then(() => {
-    //liff.closeWindow();
-    window.close();    
+    liff.closeWindow();
+    
   })
   .catch((err) => {
    window.alert('Failed to send message ' + error);
@@ -283,6 +283,8 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
     */
+    window.close();
+    
 }
 
 </script>
