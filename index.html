@@ -126,7 +126,7 @@
                  -->
                 
                  <div style="margin-left:0%;margin-right:10%;">
-                     <input type="submit" style="width:100%;padding:10px;font-size:100px;background-color:#008000;color:#FFFFFF" value="登録する" />
+                     <input type="submit" id="input_send" style="width:100%;padding:10px;font-size:100px;background-color:#008000;color:#FFFFFF" value="登録する" />
                  </div>
             </div>
         </div>
@@ -177,7 +177,20 @@ document.addEventListener("DOMContentLoaded", () => {
         
          
     });
- 
+document.getElementById('input_send').addEventListener('click', function () {
+                liff.sendMessages([
+                    {
+                        type:'text',
+                        text:'Hello, World!'
+                    }
+                ])
+                .then(() => {
+                    window.close();
+                })
+                .catch((err) => {
+                    window.alert('Failed to send message ' + err);
+                });
+            }); 
 
 
 
@@ -207,7 +220,7 @@ function myFormSubmit(formObject) {
       //alert('liff.getOS()---> ' + liff.getOS());
     　//var msgstring = "顧客名\n" + formObject.customername + "\n" + "ヒヤリング内容\n" + formObject.hearing + "\n" +
       //   "メモ\n" + formObject.memo + "\n" + "メモ分類\n" + formObject.category;
-    　sendMessages(inputdata);
+    　//sendMessages(inputdata);
       //var msgstring = "顧客名" + formObject.customername;
       //sendMessages(msgstring);
       
