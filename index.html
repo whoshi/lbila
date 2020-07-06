@@ -141,6 +141,7 @@
 <!--
 </form>
 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
      
 <script type="text/javascript">
@@ -151,8 +152,30 @@
 //
 //LIFF 初期化
 //
+$(document).ready(function () {
+    // liffId: LIFF URL "https://liff.line.me/xxx"のxxxに該当する箇所
+    // LINE DevelopersのLIFF画面より確認可能
+    var liffId = "1654390065-9nadRnPq";
+    initializeLiff(liffId);
+})
 
-
+function initializeLiff(liffId) {
+    liff
+        .init({
+            liffId: liffId
+        })
+        .then(() => {
+            // Webブラウザからアクセスされた場合は、LINEにログインする
+            //if (!liff.isInClient() && !liff.isLoggedIn()) {
+            //    window.alert("LINEアカウントにログインしてください。");
+            //    liff.login({redirectUri: location.href});
+            }
+        })
+        .catch((err) => {
+            //console.log('LIFF Initialization failed ', err);
+        });
+}
+/*
 document.addEventListener("DOMContentLoaded", () => {
       
        liff
@@ -176,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
          
     });
-   
+ */  
 
 
 
