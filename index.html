@@ -201,7 +201,7 @@ function myFormSubmit(formObject) {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
           
     
-      alert('入力データ---> ' + inputdata);
+      alert('入力データ---> \n' + inputdata);
       alert('liff.isClient()---> ' + liff.isInClient());
           //liff.closeWindow(); 
       //alert('liff.getOS()---> ' + liff.getOS());
@@ -271,24 +271,34 @@ function afterentry(msg){
   
   
 }
-function sendMessages(text) {
+function sendMessages(text) 
+{
    window.alert('LIFF.sendMessage In ');   
-   function sendMessages(text) {
-    liff.sendMessages([{
-        'type': 'text',
-        'text': text
-    }]).then(function () {
-        window.alert('LIFF.sendMessage Success ');   
-        liff.closeWindow();
-    }).catch(function (error) {
-        window.alert('Failed to send message ' + error);
-    });
-}
+   function sendMessages(text) 
+    {
+       liff.sendMessages
+       (
+         [
+            {
+              'type':'text',
+              'text':text
+            }
+         ]
+       ).then(function () 
+          {
+             window.alert('LIFF.sendMessage Success ');   
+             liff.closeWindow();
+          }
+       ).catch(function (error)
+          {
+             window.alert('Failed to send message ' + error);
+          }
+      );
+   }
 
 
     window.close();
-    
-}
+ }
 
 </script>
 </body>
