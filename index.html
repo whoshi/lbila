@@ -191,7 +191,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
                 window.alert("LIFF.isInClient()---> " + liff.isInClient());
     
-                liff.sendMessages([
+                await liff.sendMessages([
                     {
                         type:'text',
                         text:'登録しました'
