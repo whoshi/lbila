@@ -189,7 +189,13 @@ function myFormSubmit(formObject) {
       //google.script.run.withSuccessHandler(afterentry).myFunction(formObject);
       
       //google.script.run.myFunction(formObject);    
-      //alert('顧客名---> ' + formObject.customername);
+      var customername = formObject.customername;
+      var hearing = formObject.hearing;
+      var memo = formObject.memo;
+      var category = formObject.category;  
+    
+    
+      alert('顧客名---> ' + customername);
       alert('liff.isClient()---> ' + liff.isInClient());
           //liff.closeWindow(); 
       //alert('liff.getOS()---> ' + liff.getOS());
