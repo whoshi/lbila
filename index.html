@@ -192,7 +192,11 @@ function myFormSubmit(formObject) {
     　var customername = document.getElementById("input_customername").value;
       var hearing = document.getElementById("input_hearing").value;
       var memo = document.getElementById("input_memo").value;
-      var category = document.getElementById("input_category").value;
+    
+      var element = document.getElementById( "myForm" ) ;
+      var radioNodeList = element.category ;
+      var category = radioNodeList.value ;
+
       var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
           
