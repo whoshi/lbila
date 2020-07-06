@@ -256,6 +256,19 @@ function afterentry(msg){
   
 }
 function sendMessages(text) {
+    liff.sendMessages([
+  {
+    type: 'text',
+    text: 'Hello, World!'
+  }
+])
+  .then(() => {
+    
+  })
+  .catch((err) => {
+   window.alert('Failed to send message ' + error);
+  });
+    /*
     liff.sendMessages([{
         'type': 'text',
         'text': text
@@ -264,6 +277,7 @@ function sendMessages(text) {
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
     });
+    */
 }
 
 </script>
