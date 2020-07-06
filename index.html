@@ -193,8 +193,9 @@ function myFormSubmit(formObject) {
       var hearing = document.getElementById("input_hearing").value;
       var memo = document.getElementById("input_memo").value;
       var category = document.getElementById("input_customername").value;
-      var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + 
-          "【メモ】 + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
+      var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
+      inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
+          
     
       alert('入力データ---> ' + inputdata);
       alert('liff.isClient()---> ' + liff.isInClient());
