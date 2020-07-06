@@ -191,7 +191,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
                 window.alert("LIFF.isInClient()---> " + liff.isInClient());
     
-                await liff.sendMessages([
+                liff.sendMessages([
                     {
                         type:'text',
                         text:'登録しました'
@@ -199,13 +199,14 @@ document.getElementById('input_send').addEventListener('click', function () {
                 ])
                 .then(() => {
                     liff.closeWindow();
-                    window.close();
+                    //window.close();
                 })
                 .catch((err) => {
                     window.alert('Failed to send message ' + err);
                     liff.closeWindow();
-                    window.close();
+                    
                 });
+                window.close();
             }); 
 
 
