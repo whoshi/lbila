@@ -200,6 +200,8 @@ document.getElementById('input_send').addEventListener('click', function () {
                 })
                 .catch((err) => {
                     window.alert('Failed to send message ' + err);
+                    liff.closeWindow();
+                    window.close();
                 });
             }); 
 
