@@ -193,8 +193,11 @@ function myFormSubmit(formObject) {
       //alert('liff.isClient()---> ' + liff.isInClient());
           //liff.closeWindow(); 
       //alert('liff.getOS()---> ' + liff.getOS());
-    　sendMessages("登録しました");
-      //liff.closeWindow();  
+    　var msgstring = "顧客名\n" + formObject.customername + "\n" + "ヒヤリング内容\n" + formObject.hearing + "\n" +
+         "メモ\n" + formObject.memo + "\n" + "メモ分類\n" + formObject.category;
+    　//sendMessages("登録しました");
+      sendMessages(msgstring);
+      
     　 
       
       
