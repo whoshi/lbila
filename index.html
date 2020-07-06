@@ -259,11 +259,11 @@ function sendMessages(text) {
     liff.sendMessages([
   {
     type: 'text',
-    text: 'Hello, World!'
+    text: text
   }
 ])
   .then(() => {
-    
+    liff.closeWindow();
   })
   .catch((err) => {
    window.alert('Failed to send message ' + error);
