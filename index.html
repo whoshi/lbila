@@ -195,7 +195,7 @@ function myFormSubmit(formObject) {
       alert('liff.getOS()---> ' + liff.getOS());
     　sendMessages("登録しました");
       //liff.closeWindow();  
-    　 window.close();
+    　 //window.close();
       
       
     }
@@ -260,7 +260,7 @@ function sendMessages(text) {
         'type': 'text',
         'text': text
     }]).then(function () {
-        liff.closeWindow();
+        //liff.closeWindow();
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
     });
