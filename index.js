@@ -28,8 +28,19 @@ $(function () {
         //names = names.slice(0, -1);
 
         //var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
+        var customername = document.getElementById("input_customername").value;
+      var hearing = document.getElementById("input_hearing").value;
+      var memo = document.getElementById("input_memo").value;
+    
+      var element = document.getElementById( "myForm" ) ;
+      var radioNodeList = element.category ;
+      var category = radioNodeList.value ;
+
+      var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
+      inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
-        sendText('登録しました');
+        //sendText('登録しました');
+        sendText(inputdata);
 
         return false;
     });
