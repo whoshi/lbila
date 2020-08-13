@@ -36,9 +36,8 @@ $(function () {
       var radioNodeList = element.category ;
       var category = radioNodeList.value ;
         
-      alert('顧客名' + customername);
-      alert('メモ分類' + category);
-      if((customername == "")&&((hearing == "")&&(memo == "")&&(category == ""))
+      
+      if(customername === "" && hearing === "" && memo === "" && category === "")
          {
            alert('なにか入力して下さい';
            return false;
