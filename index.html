@@ -200,7 +200,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 var radioNodeList = element.category ;
                 var category = radioNodeList.value ;
 
-                var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
+                var iputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
                 inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
                 window.alert("LIFF.isInClient()---> " + liff.isInClient());
                 */
@@ -221,10 +221,11 @@ document.getElementById('input_send').addEventListener('click', function () {
                     //window.close();
                 });
                */
+                var iputdata = "登録しました"
                 liff.sendMessages([
                 {
-                  type: text,
-                  text: "hello"
+                  type: 'text',
+                  text: inputdata
                  }
                 ])
                   .then(() => {
