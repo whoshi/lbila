@@ -223,7 +223,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 */
                  
                  liff.sendMessages(
-                       [{ type: "text", "メッセージ"}]
+                       [{ type: "text", "text":"メッセージ"}]
                  ).then(function() {
                       window.alert('Message sent');
                  }).catch(function(error) {
