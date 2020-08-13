@@ -28,8 +28,8 @@ $(function () {
         //names = names.slice(0, -1);
 
         //var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
-        let msg = 'メモを登録しました!';
-        sendText(msg);
+        
+        sendText('メモを登録しました');
 
         return false;
     });
