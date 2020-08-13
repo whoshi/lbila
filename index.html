@@ -223,10 +223,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                */
                 var iputdata = "登録しました"
                 liff.sendMessages([
-                {
-                  type: 'text',
-                  text: "inputdata"
-                 }
+                {type: 'text',text: "inputdata"}
                 ])
                   .then(() => {
                        liff.closeWindow();
