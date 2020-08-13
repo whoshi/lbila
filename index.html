@@ -8,6 +8,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+   
+  
+    <style type="text/css">    
+    body{
+         -webkit-text-size-adjust: 100%;
+         
+         }
+　 input,select,textarea{
+          background: #FFEEFF;
+         }
+    input,select,textarea,button,label{
+          font-size:45px;
+         }
+     h1{
+          text-align:center;
+          line-height:5px;
+       }
+     h2{
+          text-align:right;
+           line-height:5px;
+       }
+     input[type=radio] {
+       width: 50px;
+       height: 50px;
+       vertical-align: middle;
+       }
+     
+    </style>
 </head>
 
 <body>
@@ -48,6 +76,79 @@
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
     -->
+    <h1>
+<font size="10" color="#666666">モバイルメモ</font>
+</h1>
+<h2>
+<font size="5" color="#aaaaaa">LBILA Mobile Memo for LIFF 0100 Edition</font>
+</h2>
+
+<div class="container">
+    
+    <form class="formmemo" id="myForm"onsubmit="myFormSubmit(this);">  
+        <div class="formmemo-group">
+            <label class="formmemo-label" for="input_customername">顧客名</label>
+           
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:10%;">
+                <textarea name="customername" cols="35" rows="2" id="input_customername" placeholder="例：コロッケそば"></textarea>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div class="formmemo-group">
+            <label class="formmemo-label" for="input_hearing">ヒヤリング内容</label>
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:5%;">
+                <textarea name="hearing" cols="35" rows="10" id="input_hearing" placeholder="例：IoTセンサーの情報をLINE通知できないかの相談"></textarea>
+               </div>
+            </div>
+        </div>
+        
+        <div class="formmemo-group">
+            <label class="formmemo-label" for="input_memo">メモ</label>
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:5%;">
+                <textarea name="memo" cols="35" rows="10" id="input_memo" placeholder="例：LINE botとLIFFによるLINE内アプリの技術が必要"></textarea>
+               </div>
+            </div>
+        </div>
+        
+        <div class="formmemo-group">
+                         <label class="formmemo-label">メモ分類</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio"  name="category" id="input_category" value="テレワーク" >テレワーク
+                        </label>
+                    
+                        <label class="radio-inline">
+                            <input type="radio" name="category" id="input_category" value="DX（IoT/AI/ロボット/etc）" >DX（IoT/AI/ロボット/etc）
+                        </label>
+                       <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="category" id="input_category" value="アフター/ウィズ コロナ" >アフター/ウィズ コロナ
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="category" id="input_category" value="アイディア/その他" >アイディア/その他
+                        </label>
+                    </div>
+         </div>
+         <br>
+         <div class="formmemo-group">
+            <div class="formmemo-button">
+                 
+                 
+                 <div style="margin-left:0%;margin-right:10%;">
+                     <input type="submit" id="input_send" style="width:100%;padding:10px;font-size:100px;background-color:#008000;color:#FFFFFF" value="登録する" />
+                 </div>
+            </div>
+        </div>
+        
+        <br>
+    </form>
+
+</div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
