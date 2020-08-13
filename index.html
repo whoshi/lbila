@@ -183,6 +183,16 @@ document.getElementById('input_send').addEventListener('click', function () {
     
                    
                  alert('liff.getOS()---> ' + liff.getOS());
+                 liff.getProfile()
+      .then(profile => {
+        const name = profile.displayName;
+                     alert('profile---> ' + name);
+        
+      })
+      .catch((err) => {
+                     alert('eooro---> '  + err);
+        
+      });
                 /*
                 var customername = document.getElementById("input_customername").value;
                 var hearing = document.getElementById("input_hearing").value;
