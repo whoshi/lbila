@@ -184,15 +184,15 @@ document.getElementById('input_send').addEventListener('click', function () {
                    
                  alert('liff.getOS()---> ' + liff.getOS());
                  liff.getProfile()
-      .then(profile => {
-        const name = profile.displayName;
-                     alert('profile---> ' + name);
+                    .then(profile => {
+                           const name = profile.displayName;
+                           alert('profile---> ' + name);
         
-      })
-      .catch((err) => {
-                     alert('eooro---> '  + err);
+                    })
+                    .catch((err) => {
+                           alert('Profileerror---> '  + err);
         
-      });
+                   });
                 /*
                 var customername = document.getElementById("input_customername").value;
                 var hearing = document.getElementById("input_hearing").value;
@@ -236,6 +236,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                         liff.closeWindow();
                 });
                 */
+                /*
                 if (!liff.isInClient()) {
                       window.alert('LINE内ブラウザでない');
                      liff.closeWindow();
@@ -251,7 +252,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                               liff.closeWindow();
                 });
         }
-                
+                */
                 
             }); 
 
