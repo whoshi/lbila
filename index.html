@@ -236,14 +236,17 @@ document.getElementById('input_send').addEventListener('click', function () {
                 */
                 if (!liff.isInClient()) {
                       window.alert('LINE内ブラウザでない');
+                     liff.closeWindow();
                 } else {
                     liff.sendMessages([{
-                                       'type': 'text',
+                                       'type': "text",
                                        'text': "You've successfully sent a message! Hooray!"
                    }]).then(function() {
                               window.alert('Message sent');
+                              liff.closeWindow();
                    }).catch(function(error) {
                               window.alert('Error sending message: ' + error);
+                              liff.closeWindow();
                 });
         }
                 
