@@ -312,7 +312,7 @@ function afterentry(msg){
 function sendMessages(text) 
 {
    window.alert('LIFF.sendMessage In ');  
-   /* 
+   
    liff.sendMessages([
         {
                         type:'text',
@@ -326,8 +326,8 @@ function sendMessages(text)
                     window.alert('Failed to send message ' + err);
                 });
     
-   */
-    window.close();
+   
+    liff.closeWindow();
  }
 
 </script>
