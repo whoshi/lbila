@@ -37,7 +37,7 @@ $(function () {
       var category = radioNodeList.value ;
         
       
-      
+      alert(memo);
 
       var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
