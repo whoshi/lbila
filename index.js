@@ -40,14 +40,15 @@ $(function () {
           if(hearing === ''){
               if(memo === ''){
                   if(category === ''){
-                      alert('なにか入力して下さい');
+                      alert('メモ入力が何もありません');
+                      return false;
                   }
               }
           }
       }
-      alert(memo);
+      
 
-      var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
+      var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
         //sendText('登録しました');
