@@ -221,6 +221,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                     //window.close();
                 });
                */
+                /*
                 var iputdata = "登録しました"
                 liff.sendMessages([
                 {type: 'text',text: "inputdata"}
@@ -232,6 +233,19 @@ document.getElementById('input_send').addEventListener('click', function () {
                         window.alert('Failed to send message ' + err);
                         liff.closeWindow();
                 });
+                */
+                if (!liff.isInClient()) {
+                      window.alert('LINE内ブラウザでない');
+                } else {
+                    liff.sendMessages([{
+                                       'type': 'text',
+                                       'text': "You've successfully sent a message! Hooray!"
+                   }]).then(function() {
+                              window.alert('Message sent');
+                   }).catch(function(error) {
+                              window.alert('Error sending message: ' + error);
+                });
+        }
                 
                 
             }); 
