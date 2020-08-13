@@ -29,7 +29,7 @@ $(function () {
 
         //var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
         var msg = 'メモを登録しました!
-        sendText(msg);
+        //sendText(msg);
 
         return false;
     });
