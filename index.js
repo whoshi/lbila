@@ -36,7 +36,15 @@ $(function () {
       var radioNodeList = element.category ;
       var category = radioNodeList.value ;
         
-      
+      if(customername === ''){
+          if(hearing === ''){
+              if(memo === ''){
+                  if(category === ''){
+                      alert('なにか入力して下さい');
+                  }
+              }
+          }
+      }
       alert(memo);
 
       var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
