@@ -35,6 +35,12 @@ $(function () {
       var element = document.getElementById( "myForm" ) ;
       var radioNodeList = element.category ;
       var category = radioNodeList.value ;
+        
+      if((customername == "")&&((hearing == "")&&(memo == "")&&(category == ""))
+         {
+           alert('なにか入力して下さい';
+           return false;
+         }
 
       var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
