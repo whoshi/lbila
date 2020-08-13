@@ -222,8 +222,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 });
                 */
                  liff.sendMessages([{
-                     'type': 'text',
-                     'text': 'text'
+                     'type': 'text','text'
                   }]).then(function () {
                       liff.closeWindow();
                   }).catch(function (error) {
