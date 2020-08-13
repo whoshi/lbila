@@ -204,7 +204,7 @@ document.getElementById('input_send').addEventListener('click', function () {
                 inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
                 window.alert("LIFF.isInClient()---> " + liff.isInClient());
                 */
-                /*
+                
                 liff.sendMessages([
                     {
                         'type':'text',
@@ -213,22 +213,16 @@ document.getElementById('input_send').addEventListener('click', function () {
                 ])
                 .then(() => {
                     liff.closeWindow();
-                    window.close();
+                    //window.close();
                 })
                 .catch((err) => {
                     window.alert('Failed to send message ' + err);
                     liff.closeWindow();
-                    window.close();
+                    //window.close();
                 });
-                */
+               
                  
-                 liff.sendMessages(
-                       [{ type: "text", "text":"メッセージ"}]
-                 ).then(function() {
-                      window.alert('Message sent');
-                 }).catch(function(error) {
-                    window.alert('Error sending message: ' + error);
-                   });
+                
                 
             }); 
 
