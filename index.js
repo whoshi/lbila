@@ -43,7 +43,7 @@ $(function () {
         //if (res.length>0) alert(res);
     };
     xhr.onerror = function(){       //エラーが起きた時の処理（非同期）
-        //alert("error!");
+        alert("error!");
     }
     xhr.open('post', url, true);    //(1)
     xhr.setRequestHeader('Content-Type', 'application/json');
