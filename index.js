@@ -24,7 +24,7 @@ $(function () {
 
       var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
-      /*  
+      
       var json_asocc = 
         [
             {
@@ -34,7 +34,7 @@ $(function () {
                 'category': category
             }
         ];
-     
+     /*  
     //JSONにエンコード
     var json_text = JSON.stringify(json_asocc);
  
