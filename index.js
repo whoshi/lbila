@@ -29,12 +29,15 @@ $(function () {
 
       var JSONdata = {
                     customername: customername,
-                    hearing: hearing     
+                    hearing: hearing,
+                    memo: memo ,
+                    category: category 
        };
 
      alert(JSON.stringify(JSONdata));
+     // {"cd":"100", "name":"Taro"},
      $.post(url,
-      {"cd":"100", "name":"Taro"},
+      JSONdata,
      function(dt){
          //console.log(dt);
          alert(dt);
