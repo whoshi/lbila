@@ -37,11 +37,11 @@ $(function () {
         //sendText('登録しました');
         data = {
         gassenddata:"gassenddata"
-        : customername,
+        customername: customername,
         hearing: hearing,
         memo: memo,
         category: category,
-    }
+        }
         
         
         var gassenddata = "gassenddata" + "," + customername + "," + hearing + "," + memo + "," + category
