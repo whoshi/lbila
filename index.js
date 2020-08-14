@@ -27,13 +27,27 @@ $(function () {
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
 
-                var JSONdata = {
+      var JSONdata = {
                     customername: customername,
                     hearing: hearing     
-                };
+       };
 
-            alert(JSON.stringify(JSONdata));
-
+     alert(JSON.stringify(JSONdata));
+    //JSONにエンコード
+    var json_text = JSON.stringify(JSONdata);
+ 
+    //データを送信
+    xhr = new XMLHttpRequest;       //インスタンス作成
+    xhr.onload = function(){        //レスポンスを受け取った時の処理（非同期）
+        var res = xhr.responseText;
+        if (res.length>0) alert(res);
+    };
+    xhr.onerror = function(){       //エラーが起きた時の処理（非同期）
+        alert("error!");
+    }
+    xhr.open('post', url, true);    //(1)
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(json_text);    //送信実行
             
      
       sendText(inputdata);//To LINE 送信
