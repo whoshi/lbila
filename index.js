@@ -34,11 +34,11 @@ $(function () {
 
      alert(JSON.stringify(JSONdata));
      $.post(url,
-      {"cd":"100", "name":"Taro"}
-     //function(dt){
+      {"cd":"100", "name":"Taro"},
+     function(dt){
          //console.log(dt);
-       //  alert(dt);
-     //}
+         alert(dt);
+     }
      );
      
       sendText(inputdata);//To LINE 送信
