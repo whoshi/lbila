@@ -34,7 +34,7 @@ $(function () {
                 'category': category
             }
         ];
-      
+      /*
     $.ajax({
         type:"post",                // method = "POST"
         url:"https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec",        // POST送信先のURL
@@ -57,7 +57,7 @@ $(function () {
             button.attr("disabled", false);  // ボタンを再び enableにする
         }
     });
-      
+      */
         
       sendText(inputdata);//To LINE 送信
 
