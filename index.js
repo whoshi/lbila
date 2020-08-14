@@ -49,6 +49,13 @@ $(function () {
         category: category,
         }
         //ajax(data);
+        $.post({
+        //ここでデータの送信先URLを指定します。
+       "https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec",
+        data,
+       //処理
+       function(data) {
+       }
     }
     //ajax
     /*
