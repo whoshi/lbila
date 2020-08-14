@@ -36,12 +36,36 @@ $(function () {
         
         //sendText('登録しました');
         
-        gassend(inputdata);
-        sendText(inputdata);
+        gassend(customername, hearing,memo,category);//Gasへデータ引き渡し
+        sendText(inputdata);//To LINE 送信
 
         return false;
     });
-    function gassend(inputdata) {
-        alert(inputdata);
+    function gassend(customername, hearing,memo,category){
+        
+        data = {
+        customername: customername,
+        hearing: hearing,
+        category: category,
+        }
     }
+    //ajax
+    function ajax(data) {
+        var url = ''; // Change here: Your GAS URL here
+    $.ajax({
+        url: url,
+        type:'POST',
+        data: data
+    }).done(function(res){
+        if(res.response != "success") {
+            console.log(JSON.stringify(res.error));
+            alert('送信失敗'); 
+            return;
+        }
+        alert('送信完了');
+    }).fail(function(){
+        alert('送信失敗'); 
+    
+    }
+    
 });
