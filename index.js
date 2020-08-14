@@ -44,8 +44,8 @@ $(function () {
         }
         
         
-        var gassenddata = "gassenddata" + "," + customername + "," + hearing + "," + memo + "," + category
-        gassend(data);//Gasへデータ引き渡し
+        //var gassenddata = "gassenddata" + "," + customername + "," + hearing + "," + memo + "," + category
+        //gassend(data);//Gasへデータ引き渡し
         
         sendText(inputdata);//To LINE 送信
         
