@@ -35,46 +35,30 @@ $(function () {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
         //sendText('登録しました');
-        
-        gassend(customername, hearing,memo,category);//Gasへデータ引き渡し
+        var gassenddata = "gassenddata" + "," + customername + "," + hearing + "," + memo + "," + category
+        gassend(gassenddata);//Gasへデータ引き渡し
         sendText(inputdata);//To LINE 送信
 
         return false;
     });
-    function gassend(customername, hearing,memo,category){
-        
-        data = {
-        customername: customername,
-        hearing: hearing,
-        category: category,
-        }
-        //ajax(data);
-        $.post({
-        //ここでデータの送信先URLを指定します。
-       "https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec",
-        data,
-       //処理
-       function(data) {
-       }
-    }
-    //ajax
-    /*
-    function ajax(data) {
-        var url = 'https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec'; // Change here: Your GAS URL here
-        $.ajax({
-             url: url,
-             type:'POST',
-             data: data
-        }).done(function(res){
-             if(res.response != "success") {
-                 //console.log(JSON.stringify(res.error));
-                 alert('送信失敗'); 
-                 return;
-        }
-        alert('送信完了');
     
-    
-    }
-    });
-    */
+    //
+    function gassend(value) {
+ 
+    var form = document.createElement('form');
+    var request = document.createElement('input');
+ 
+    form.method = 'POST';
+    form.action = 'https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec';
+ 
+    request.type = 'hidden'; //入力フォームが表示されないように
+    request.name = 'text';
+    request.value = value;
+ 
+    form.appendChild(request);
+    document.body.appendChild(form);
+ 
+    form.submit();
+ 
+}
 });
