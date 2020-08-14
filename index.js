@@ -40,7 +40,7 @@ $(function () {
         memo: memo,
         category: category
         };
-      postForm(inputdata);
+      //postForm(inputdata);
         
      
         
@@ -51,6 +51,7 @@ $(function () {
         return false;
     });
     //
+    /*
     function postForm(value) {
        $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', value )
  
@@ -64,6 +65,7 @@ $(function () {
     always ( function() {  } )
     
     });
+    */
     /*
     var form = document.createElement('form');
     var request = document.createElement('input');
