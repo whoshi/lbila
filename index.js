@@ -39,7 +39,7 @@ $(function () {
         
         
         var gassenddata = "gassenddata" + "," + customername + "," + hearing + "," + memo + "," + category
-        gassend(gassenddata);//Gasへデータ引き渡し
+        //gassend(gassenddata);//Gasへデータ引き渡し
         
         
         
