@@ -49,8 +49,8 @@ $(function () {
     }
     */
     
-});
-function gaspost(memodata) {
+}
+ function gaspost(memodata) {
         $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', memodata) )
  
         //サーバーからの返信を受け取る
@@ -62,4 +62,8 @@ function gaspost(memodata) {
        //通信が終了した場合
        always ( function() {  } )
     }
+ 
+ 
+ );
+
 
