@@ -37,7 +37,7 @@ $(function () {
     var json_text = JSON.stringify(JSONdata);
  
     var xmlHttpRequest = new XMLHttpRequest();
-    
+    /*
     xmlHttpRequest.onreadystatechange = function()
     {
         var READYSTATE_COMPLETED = 4;
@@ -51,14 +51,14 @@ $(function () {
             
         }
     }
-    
+    */
     xmlHttpRequest.open( 'POST', 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec',false );
  
     // サーバに対して解析方法を指定する
     xmlHttpRequest.setRequestHeader( 'Content-Type', 'application/json');
  
     // データをリクエスト ボディに含めて送信する
-    xmlHttpRequest.send(json_text);
+    //xmlHttpRequest.send(json_text);
            
      
       sendText(inputdata);//To LINE 送信
