@@ -20,7 +20,7 @@ $(function () {
               }
           }
       }
-      var memodata = category;
+      //var memodata = category;
 
       
       //gaspost(memodata)  ;
@@ -29,8 +29,7 @@ $(function () {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
       
-        
-      sendText(inputdata);//To LINE 送信
+        sendText(inputdata);//To LINE 送信
 
         return false;
     });
