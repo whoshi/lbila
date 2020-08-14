@@ -40,9 +40,9 @@ $(function () {
         memo: memo,
         category: category
         };
-      //postForm(inputdata);
+      postForm(inputdata);
         
-      post('https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec',data)
+     
         
       sendText(inputdata);//To LINE 送信
         
@@ -52,7 +52,19 @@ $(function () {
     });
     //
     function postForm(value) {
+       $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', data )
  
+     //サーバーからの返信を受け取る
+     .done( function(data) {  } )
+ 
+     //通信エラーの場合
+    .fail( function() {  } )
+ 
+    //通信が終了した場合
+    always ( function() {  } )
+    
+    });
+    /*
     var form = document.createElement('form');
     var request = document.createElement('input');
  
@@ -67,17 +79,7 @@ $(function () {
     document.body.appendChild(form);
  
     form.submit();
+    */
  
     }
-    $.post( uri, data )
- 
-     //サーバーからの返信を受け取る
-     .done( function(data) {  } )
- 
-     //通信エラーの場合
-    .fail( function() {  } )
- 
-    //通信が終了した場合
-    always ( function() {  } )
     
-    });
