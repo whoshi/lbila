@@ -40,7 +40,7 @@ $(function () {
         memo: memo,
         category: category
         };
-      postForm(postdata);
+      postForm(inputdata);
         
       sendText(inputdata);//To LINE 送信
         
