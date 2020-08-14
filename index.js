@@ -28,15 +28,8 @@ $(function () {
         
       var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
-
-        sendText(inputdata);//To LINE 送信
-
-        return false;
-    });
-    //
-    /*
-    function gaspost(memodata) {
-        $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', memodata) )
+        
+       $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', memodata) )
  
         //サーバーからの返信を受け取る
         .done( function(data) {  } )
@@ -46,9 +39,12 @@ $(function () {
  
        //通信が終了した場合
        always ( function() {  } )
-    }
-    */
-    
+      
+
+        sendText(inputdata);//To LINE 送信
+
+        return false;
+    });
 });
 
 
