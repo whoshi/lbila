@@ -35,11 +35,17 @@ $(function () {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
         //sendText('登録しました');
-        
+        data = {
+        gassenddata:"gassenddata"
+        : customername,
+        hearing: hearing,
+        memo: memo,
+        category: category,
+    }
         
         
         var gassenddata = "gassenddata" + "," + customername + "," + hearing + "," + memo + "," + category
-        gassend(gassenddata);//Gasへデータ引き渡し
+        gassend(data);//Gasへデータ引き渡し
         
         sendText(inputdata);//To LINE 送信
         
