@@ -33,7 +33,7 @@ $(function () {
                 };
 
             alert(JSON.stringify(JSONdata));
-/*
+
             $.ajax({
                 type : 'post',
                 url : url,
@@ -55,7 +55,7 @@ $(function () {
                     alert(JSON.stringify(data));
                     
                 }
-                */
+            });
       /*
       var json_asocc = 
         [
