@@ -34,49 +34,8 @@ $(function () {
 
             alert(JSON.stringify(JSONdata));
 
-            $.ajax({
-                type : 'post',
-                url : url,
-                data : JSON.stringify(JSONdata),
-                contentType: 'application/JSON',
-                dataType : 'JSON',
-                scriptCharset: 'utf-8',
-                success : function(data) {
-
-                    // Success
-                    alert("success");
-                    alert(JSON.stringify(data));
-                    
-                },
-                error : function(data) {
-
-                    // Error
-                    alert("error");
-                    alert(JSON.stringify(data));
-                    
-                }
-            });
-      /*
-      var json_asocc = 
-        [
-            {
-                'customername': customername,
-                'hearing': hearing,
-                'memo': memo,
-                'category': category
-            }
-        ];
-      $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', json_asocc )
- 
-      //サーバーからの返信を受け取る
-      .done( function(data) {  } )
- 
-      //通信エラーの場合
-      .fail( function() {  } )
- 
-      //通信が終了した場合
-      always ( function() {  } )
-        */
+            
+     
       sendText(inputdata);//To LINE 送信
 
         return false;
