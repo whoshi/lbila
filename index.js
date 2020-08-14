@@ -33,7 +33,12 @@ $(function () {
        };
 
      alert(JSON.stringify(JSONdata));
-     
+     $.post(url,
+      JSONdata,
+     function(dt){
+         //console.log(dt);
+     }
+     );
      
       sendText(inputdata);//To LINE 送信
 
