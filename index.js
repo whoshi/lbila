@@ -52,20 +52,19 @@ $(function () {
     //ajax
     function ajax(data) {
         var url = 'https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec'; // Change here: Your GAS URL here
-    $.ajax({
-        url: url,
-        type:'POST',
-        data: data
-    }).done(function(res){
-        if(res.response != "success") {
-            console.log(JSON.stringify(res.error));
-            alert('送信失敗'); 
-            return;
+        $.ajax({
+             url: url,
+             type:'POST',
+             data: data
+        }).done(function(res){
+             if(res.response != "success") {
+                 //console.log(JSON.stringify(res.error));
+                 alert('送信失敗'); 
+                 return;
         }
         alert('送信完了');
-    }).fail(function(){
-        alert('送信失敗'); 
+    
     
     }
-    
+    });
 });
