@@ -37,6 +37,7 @@ $(function () {
       JSONdata,
      function(dt){
          //console.log(dt);
+         alert(dt);
      }
      );
      
