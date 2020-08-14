@@ -57,7 +57,7 @@ $(function () {
     xmlHttpRequest.setRequestHeader( 'Content-Type', 'application/json');
  
     // データをリクエスト ボディに含めて送信する
-    xmlHttpRequest.send( JSON.stringify(JSONdata) );
+    xmlHttpRequest.send(json_text);
             
      
       sendText(inputdata);//To LINE 送信
