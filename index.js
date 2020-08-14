@@ -20,7 +20,7 @@ $(function () {
               }
           }
       }
-      var postdata = customername + ',' + hearing + ',' + memo + ',' + category;
+      var postdata = customername + "," + hearing + "," + memo + "," + category;
 
       
       gaspost(postdata);
