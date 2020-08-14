@@ -24,7 +24,7 @@ $(function () {
 
       var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
-        
+      /*  
       var json_asocc = 
         [
             {
@@ -50,7 +50,7 @@ $(function () {
     xhr.open('post', "api_sendjson.php", true);    //(1)
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(json_text);    //送信実行
-        
+     */   
       
         
       sendText(inputdata);//To LINE 送信
