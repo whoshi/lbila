@@ -1,4 +1,5 @@
 $(function () {
+    /*
     // カレンダー
     $(function () {
         $('input[name="date"]').datepicker({
@@ -16,7 +17,7 @@ $(function () {
             );
         }
     });
-
+    */
     // 送信
     $('form').submit(function () {
         //var date = $('input[name="date"]').val();
