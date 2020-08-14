@@ -52,7 +52,7 @@ $(function () {
     });
     //
     function postForm(value) {
-       $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', data )
+       $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', value )
  
      //サーバーからの返信を受け取る
      .done( function(data) {  } )
