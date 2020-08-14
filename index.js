@@ -30,7 +30,7 @@ $(function () {
             {
                 'customername': customername,
                 'hearing': hearing,
-                'memo': memo
+                'memo': memo,
                 'category': category
             }
         ];
