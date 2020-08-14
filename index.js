@@ -34,7 +34,7 @@ $(function () {
 
      alert(JSON.stringify(JSONdata));
      $.post(url,
-      JSONdata,
+      JSON.stringify(JSONdata),
      function(dt){
          //console.log(dt);
          alert(dt);
