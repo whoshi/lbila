@@ -55,7 +55,7 @@ $(function () {
     var request = document.createElement('input');
  
     form.method = 'POST';
-    form.action = 'https://httpbin.org/post';
+    form.action = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
  
     request.type = 'hidden'; //入力フォームが表示されないように
     request.name = 'text';
