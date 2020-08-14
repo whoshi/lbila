@@ -48,9 +48,10 @@ $(function () {
         hearing: hearing,
         category: category,
         }
-        ajax(data);
+        //ajax(data);
     }
     //ajax
+    /*
     function ajax(data) {
         var url = 'https://script.google.com/macros/s/AKfycbyYeIad_7xrWIA5QBA9aLj9xPF6_WMgPIDAErHdw6rPea1ZuAa5/exec'; // Change here: Your GAS URL here
         $.ajax({
@@ -68,4 +69,5 @@ $(function () {
     
     }
     });
+    */
 });
