@@ -34,7 +34,7 @@ $(function () {
                 'category': category
             }
         ];
-     /*  
+      
     //JSONにエンコード
     var json_text = JSON.stringify(json_asocc);
  
@@ -50,7 +50,7 @@ $(function () {
     xhr.open('post', "api_sendjson.php", true);    //(1)
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(json_text);    //送信実行
-     */   
+       
       
         
       sendText(inputdata);//To LINE 送信
