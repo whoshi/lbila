@@ -34,30 +34,16 @@ $(function () {
                 'category': category
             }
         ];
-      /*
-    $.ajax({
-        type:"post",                // method = "POST"
-        url:"https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec",        // POST送信先のURL
-        data:JSON.stringify(json_asocc),  // JSONデータ本体
-        contentType: 'application/json', // リクエストの Content-Type
-        dataType: "json",           // レスポンスをJSONとしてパースする
-        success: function(json_data) {   // 200 OK時
-            // JSON Arrayの先頭が成功フラグ、失敗の場合2番目がエラーメッセージ
-            if (!json_data[0]) {    // サーバが失敗を返した場合
-                alert("Transaction error. " + json_data[1]);
-                return;
-            }
-            // 成功時処理
-            location.reload();
-        },
-        error: function() {         // HTTPエラー時
-            alert("Server Error. Pleasy try again later.");
-        },
-        complete: function() {      // 成功・失敗に関わらず通信が終了した際の処理
-            button.attr("disabled", false);  // ボタンを再び enableにする
-        }
-    });
-      */
+      $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', json_asocc )
+ 
+      //サーバーからの返信を受け取る
+      .done( function(data) {  } )
+ 
+      //通信エラーの場合
+      .fail( function() {  } )
+ 
+      //通信が終了した場合
+      always ( function() {  } )
         
       sendText(inputdata);//To LINE 送信
 
