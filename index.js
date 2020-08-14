@@ -35,9 +35,13 @@ $(function () {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
         //sendText('登録しました');
+        
+        gassend(inputdata);
         sendText(inputdata);
 
         return false;
     });
-    
+    function gassend(inputdata) {
+        alert(inputdata);
+    }
 });
