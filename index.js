@@ -37,6 +37,7 @@ $(function () {
     var json_text = JSON.stringify(JSONdata);
  
     var xmlHttpRequest = new XMLHttpRequest();
+    /*
     xmlHttpRequest.onreadystatechange = function()
     {
         var READYSTATE_COMPLETED = 4;
@@ -58,7 +59,7 @@ $(function () {
  
     // データをリクエスト ボディに含めて送信する
     xmlHttpRequest.send(json_text);
-            
+     */       
      
       sendText(inputdata);//To LINE 送信
 
