@@ -34,7 +34,13 @@ $(function () {
       var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
-        
+      var postdata = {
+        customername: customername,
+        hearing: hearing,
+        memo: memo,
+        category: category
+        };
+      postForm(postdata);
         
       sendText(inputdata);//To LINE 送信
         
@@ -42,6 +48,24 @@ $(function () {
 
         return false;
     });
-    
+    //
+    function postForm(value) {
+ 
+    var form = document.createElement('form');
+    var request = document.createElement('input');
+ 
+    form.method = 'POST';
+    form.action = 'https://httpbin.org/post';
+ 
+    request.type = 'hidden'; //入力フォームが表示されないように
+    request.name = 'text';
+    request.value = value;
+ 
+    form.appendChild(request);
+    document.body.appendChild(form);
+ 
+    form.submit();
+ 
+}
     
 });
