@@ -48,6 +48,7 @@ $(function () {
         hearing: hearing,
         category: category,
         }
+        ajax(data);
     }
     //ajax
     function ajax(data) {
