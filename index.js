@@ -35,7 +35,7 @@ $(function () {
         return false;
     });
     //
-    /*
+    
     function gaspost(memodata) {
         $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', memodata) )
  
@@ -48,6 +48,5 @@ $(function () {
        //通信が終了した場合
        always ( function() {  } )
     }
-    */
     
 });
