@@ -21,7 +21,7 @@ $(function () {
           }
       }
       var postdata = customername;
-      postdata = postdata + ,";
+      postdata = postdata + ",";
 
       
       gaspost(postdata);
