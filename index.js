@@ -34,7 +34,7 @@ $(function () {
 
      alert(JSON.stringify(JSONdata));
      $.post(url,
-      JSON.stringify(JSONdata),
+      {"cd":"100", "name":"Taro"},
      function(dt){
          //console.log(dt);
          alert(dt);
