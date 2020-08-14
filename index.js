@@ -34,16 +34,7 @@ $(function () {
       var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
         
-      /*
-      var postdata = {
-        customername: customername,
-        hearing: hearing,
-        memo: memo,
-        category: category
-        };
-      //postForm(inputdata);
-        */
-     
+      
         
       sendText(inputdata);//To LINE 送信
         
@@ -51,38 +42,6 @@ $(function () {
 
         return false;
     });
-    //
-    /*
-    function postForm(value) {
-       $.post( 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec', value )
- 
-     //サーバーからの返信を受け取る
-     .done( function(data) {  } )
- 
-     //通信エラーの場合
-    .fail( function() {  } )
- 
-    //通信が終了した場合
-    always ( function() {  } )
     
-    });
-    */
-    /*
-    var form = document.createElement('form');
-    var request = document.createElement('input');
- 
-    form.method = 'POST';
-    form.action = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
- 
-    request.type = 'hidden'; //入力フォームが表示されないように
-    request.name = 'text';
-    request.value = value;
- 
-    form.appendChild(request);
-    document.body.appendChild(form);
- 
-    form.submit();
-    */
- 
     }
     
