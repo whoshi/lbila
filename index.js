@@ -47,7 +47,7 @@ $(function () {
     xhr.onerror = function(){       //エラーが起きた時の処理（非同期）
         alert("error!");
     }
-    xhr.open('post', "api_sendjson.php", true);    //(1)
+    xhr.open('post', "https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec", true);    //(1)
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(json_text);    //送信実行
        
