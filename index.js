@@ -33,7 +33,7 @@ $(function () {
        };
 
      alert(JSON.stringify(JSONdata));
-    
+     
      
       sendText(inputdata);//To LINE 送信
 
