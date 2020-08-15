@@ -50,7 +50,7 @@ $(function () {
       const name = profile.displayName
 
      // HTMLに挿入
-     document.getElementById("linedispnamearea").innerText = name;
+      document.linedispform.linedispname.value = name;
       });
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
