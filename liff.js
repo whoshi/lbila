@@ -46,7 +46,7 @@ function getprofile(){
      liff.getProfile().then(function (profile) {
         
         
-        alert(profile.displayName);
+        windows.alert(profile.displayName);
         
        }).catch(function (error) {
         window.alert("Error getting profile: " + error);
