@@ -22,14 +22,7 @@ $(function () {
       }
      
       	    
-      liff.getProfile().then(profile => {
-
-      // プロフィール名
-      const name = profile.displayName
-
-     // HTMLに挿入
-      document.linedispform.linedispname.value = name;
-      });
+      
       
           
 
@@ -54,7 +47,7 @@ $(function () {
       
       
       //alert(getdisplayname());
-      /*	    
+      	    
       liff.getProfile().then(profile => {
 
       // プロフィール名
@@ -63,12 +56,12 @@ $(function () {
      // HTMLに挿入
       document.linedispform.linedispname.value = name;
       });
-      */
-       const linedispname = document.linedispform.linedispname.value;
+      
+       //const linedispname = document.linedispform.linedispname.value;
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
        //var dispname  = document.linedispnamearea.value;
-       alert(linedispname);
+       //alert(linedispname);
 
       var JSONdata = {
                     nowdate:nowdate,
