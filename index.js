@@ -50,8 +50,18 @@ $(function () {
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
 	    
-     
-       const linedispname = document.linedispform.linedispname.value;
+       while(1){
+	    const linedispname = document.linedispform.linedispname.value;
+	    if(linedispname == "LINE DISPNAME"){
+		    sleep(500);
+		    
+	    }else{
+		   break; 
+	    }
+	       
+	       
+       }
+       //const linedispname = document.linedispform.linedispname.value;
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
        //var dispname  = document.linedispnamearea.value;
