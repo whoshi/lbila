@@ -24,7 +24,7 @@ $(function () {
       liff.getProfile().then(function (profile) {
         
         
-        alert(liff.getProfile().profile.displayName);
+        alert(profile.displayName);
         
        }).catch(function (error) {
         window.alert("Error getting profile: " + error);
