@@ -53,9 +53,9 @@ $(function () {
      document.getElementById("linedispnamearea").innerText = name;
       });
        //var linedispname  = document.getElementById("linedispnamearea");   
-       var linedispname = document.getElementById("linedispnamearea");
-       var dispname  = document.linedispnamearea.value;
-       alert(dispname);
+       //var linedispname = document.getElementById("linedispnamearea");
+       //var dispname  = document.linedispnamearea.value;
+       //alert(dispname);
 
       var JSONdata = {
                     nowdate:nowdate,
