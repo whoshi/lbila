@@ -39,13 +39,20 @@ $(function () {
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
 	    
-      getprofile();
+      //getprofile();
 	    
       
  
-      alert(getdisplayname());
- 
-     
+      //alert(getdisplayname());
+      liff.getProfile().then(profile => {
+
+        // プロフィール名
+        const name = profile.displayName
+
+        // HTMLに挿入
+        //document.querySelector("#name").innerText = name
+	alert(name);
+       })
 	    
      
 
