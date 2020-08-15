@@ -5,7 +5,7 @@ $(document).ready(function () {
     initializeLiff(liffId);
     
 })
-
+var msg = "";
 function initializeLiff(liffId) {
     liff
         .init({
@@ -42,7 +42,7 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
 }
-var msg;
+
 function getprofile(){
     
     liff.getProfile()
