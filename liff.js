@@ -43,15 +43,16 @@ function sendMessages(text) {
     });
 }
 function getprofile(){
+    var msg;
     liff.getProfile()
     .then(profile => {
-      window.alert(profile.displayName)
+      msg = profile.displayName
     })
     .catch((err) => {
       window.alert('getprofile error', err)
     })
     
-    
+    return msg;
 }
 
 
