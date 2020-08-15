@@ -50,26 +50,12 @@ $(function () {
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
 	    
-      //getprofile();
      
-      
-      
-      //alert(getdisplayname());
-      /*	    
-      liff.getProfile().then(profile => {
-
-      // プロフィール名
-      const name = profile.displayName
-
-     // HTMLに挿入
-      document.linedispform.linedispname.value = name;
-      });
-      */
-       //const linedispname = document.linedispform.linedispname.value;
+       const linedispname = document.linedispform.linedispname.value;
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
        //var dispname  = document.linedispnamearea.value;
-       //alert(linedispname);
+       alert(linedispname);
 
       var JSONdata = {
                     nowdate:nowdate,
