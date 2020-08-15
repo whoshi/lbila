@@ -54,8 +54,8 @@ $(function () {
       });
        //var linedispname  = document.getElementById("linedispnamearea");   
        var linedispname = document.getElementById("linedispnamearea");
-       linedispname.innerText = document.linedispnamearea.value;
-       alert(linedispname.innerText);
+       val dispname  = document.linedispnamearea.value;
+       alert(dispname);
 
       var JSONdata = {
                     nowdate:nowdate,
