@@ -60,9 +60,9 @@ $(function () {
      // {"cd":"100", "name":"Taro"},
      $.post(url,
       JSONdata,
-     function(dt){
+      function(dt){
          //console.log(dt);
-         alert(dt);
+         //alert(dt);
      }
      );
      
