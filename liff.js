@@ -3,6 +3,14 @@ $(document).ready(function () {
     // LINE DevelopersのLIFF画面より確認可能
     var liffId = "1654689972-a3rzGmrE";
     initializeLiff(liffId);
+    liff.getProfile().then(profile => {
+
+      // プロフィール名
+      const name = profile.displayName
+
+     // HTMLに挿入
+      document.linedispform.linedispname.value = name;
+      });
     
     
 })
