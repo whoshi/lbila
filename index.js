@@ -41,7 +41,7 @@ $(function () {
 	    
       getprofile();
 	    
-      sleep(3000);
+      
  
       alert(getdisplayname());
  
