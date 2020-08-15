@@ -51,8 +51,8 @@ $(function () {
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
 	    
        while(1){
-	    const linedispname = document.linedispform.linedispname.value;
-	    if(linedispname == "LINE DISPNAME"){
+	    var linedispname = document.linedispform.linedispname.value;
+	    if(linedispname == 'LINE DISPNAME'){
 		    sleep(500);
 		    
 	    }else{
