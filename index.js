@@ -29,7 +29,7 @@ $(function () {
       sendText(inputdata);//To LINE 送信
       
       const datecurrent = new Date();
-	  const nowdate = datecurrent.getFullYear() + "年" + 
+      const nowdate = datecurrent.getFullYear() + "年" + 
 				(datecurrent.getMonth() + 1)  + "月" + 
 				datecurrent.getDate() + "日" + 
 				datecurrent.getHours() + "時" + 
@@ -39,7 +39,7 @@ $(function () {
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
 
       var JSONdata = {
-                    nowdate:nowdate
+                    nowdate:nowdate,
                     customername: customername,
                     hearing: hearing,
                     memo: memo ,
