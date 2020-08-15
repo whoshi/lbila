@@ -54,7 +54,7 @@ $(function () {
       });
        //var linedispname  = document.getElementById("linedispnamearea");   
        var linedispname = document.getElementById("linedispnamearea");
-       val dispname  = document.linedispnamearea.value;
+       var dispname  = document.linedispnamearea.value;
        alert(dispname);
 
       var JSONdata = {
