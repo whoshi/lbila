@@ -41,9 +41,9 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
 }
-function closewindow() {
-    liff.closeWindow();
-}
+//function closewindow() {
+//    liff.closeWindow();
+//}
 
 // Webブラウザからメッセージ送信
 function shareTargetPicker(text) {
