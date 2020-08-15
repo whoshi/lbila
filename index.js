@@ -51,6 +51,7 @@ $(function () {
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
        var linedispname = "";	
        let islinedisp = 0;
+       /*	    
        while(islinedisp < 1){
 	    linedispname = document.linedispform.linedispname.value;
 	    if(linedispname == 'LINE DISPNAME'){
@@ -62,6 +63,7 @@ $(function () {
 	       
 	       
        }
+       */
        //const linedispname = document.linedispform.linedispname.value;
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
