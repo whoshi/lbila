@@ -38,27 +38,11 @@ function sendMessages(text) {
         'type': 'text',
         'text': text
     }]).then(function () {
-        //liff.closeWindow();
+        liff.closeWindow();
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
     });
 }
-
-function getprofile(){
-    
-    liff.getProfile()
-    .then(profile => {
-      
-	    
-      // HTMLに挿入
-      document.querySelector("#name").innerText = profile.displayName;
-    })
-    .catch((err) => {
-      window.alert('getprofile error', err);
-    })
-   
-}
-
 
 // Webブラウザからメッセージ送信
 function shareTargetPicker(text) {
