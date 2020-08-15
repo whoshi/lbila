@@ -3,7 +3,7 @@ $(document).ready(function () {
     // LINE DevelopersのLIFF画面より確認可能
     var liffId = "1654689972-a3rzGmrE";
     initializeLiff(liffId);
-    getprofile();
+    
 })
 
 function initializeLiff(liffId) {
@@ -46,7 +46,7 @@ function getprofile(){
      liff.getProfile().then(function (profile) {
         
         
-        windows.alert('ok');
+        return profile.displayName;
         
        }).catch(function (error) {
         window.alert("Error getting profile: " + error);
