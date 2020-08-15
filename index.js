@@ -49,7 +49,7 @@ $(function () {
 				datecurrent.getSeconds() + "秒";
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
-       c//onst linedispname;	
+       //const linedispname;	
        let islinedisp = 0;
        	    
        while(islinedisp < 1){
