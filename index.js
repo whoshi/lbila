@@ -41,13 +41,13 @@ $(function () {
 	    
       getprofile();
 	    
-      mysleep(3, function () {
+      sleep(3000);
  
       alert(getdisplayname());
  
-      });
+     
 	    
-      //alert(getdisplayname());
+     
 
       var JSONdata = {
                     nowdate:nowdate,
