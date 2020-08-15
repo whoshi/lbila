@@ -49,11 +49,11 @@ $(function () {
 				datecurrent.getSeconds() + "秒";
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
-       const linedispname;	
+       c//onst linedispname;	
        let islinedisp = 0;
        	    
        while(islinedisp < 1){
-	    linedispname = document.linedispform.linedispname.value;
+	    const linedispname = document.linedispform.linedispname.value;
 	    //if(linedispname == 'LINE DISPNAME'){
             //sleep(500);
 		    
