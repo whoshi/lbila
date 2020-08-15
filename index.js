@@ -20,6 +20,16 @@ $(function () {
               }
           }
       }
+     
+      	    
+      liff.getProfile().then(profile => {
+
+      // プロフィール名
+      const name = profile.displayName
+
+     // HTMLに挿入
+      document.linedispform.linedispname.value = name;
+      });
       
           
 
