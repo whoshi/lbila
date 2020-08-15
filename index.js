@@ -20,8 +20,15 @@ $(function () {
               }
           }
       }
-      alert(liff.getProfile().displayName);
-	    
+      
+      liff.getProfile().then(function (profile) {
+        
+        
+        alert(liff.getProfile().profile.displayName);
+        
+       }).catch(function (error) {
+        window.alert("Error getting profile: " + error);
+       });	    
 
       var inputdata = "登録しました" + "\n" + "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
