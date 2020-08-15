@@ -54,7 +54,8 @@ function getprofile(){
       window.alert('getprofile error', err);
     })
     //window.alert(msg);
-    //return msg;
+    sleep(1000);
+    return msg;
 }
 
 
