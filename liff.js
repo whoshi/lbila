@@ -42,8 +42,9 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
 }
+var msg;
 function getprofile(){
-    var msg;
+    
     liff.getProfile()
     .then(profile => {
       msg = profile.displayName;
@@ -53,9 +54,7 @@ function getprofile(){
     .catch((err) => {
       window.alert('getprofile error', err);
     })
-    //window.alert(msg);
-    sleep(1000);
-    return msg;
+   
 }
 
 
