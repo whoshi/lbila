@@ -53,7 +53,7 @@ $(function () {
        let islinedisp = 0;
        	    
        while(islinedisp < 1){
-	    //linedispname = document.linedispform.linedispname.value;
+	    linedispname = document.linedispform.linedispname.value;
 	    //if(linedispname == 'LINE DISPNAME'){
             //sleep(500);
 		    
