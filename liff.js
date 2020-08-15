@@ -45,7 +45,7 @@ function sendMessages(text) {
 function getprofile(){
     liff.getProfile()
     .then(profile => {
-      return profile.displayName
+      window.alert(profile.displayName)
     })
     .catch((err) => {
       window.alert('getprofile error', err)
