@@ -43,14 +43,14 @@ function sendMessages(text) {
     });
 }
 function getprofile(){
-     liff.getProfile().then(function (profile) {
-        
-        
-        return profile.displayName;
-        
-       }).catch(function (error) {
-        window.alert("Error getting profile: " + error);
-       });	   
+    liff.getProfile()
+    .then(profile => {
+      return profile.displayName
+    })
+    .catch((err) => {
+      window.alert('getprofile error', err)
+    })
+    
     
 }
 
