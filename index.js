@@ -44,7 +44,14 @@ $(function () {
       
       
       //alert(getdisplayname());
-      
+      liff.getProfile().then(profile => {
+
+      // プロフィール名
+      const name = profile.displayName
+
+     // HTMLに挿入
+     document.querySelector("#name").innerText = name
+      });
       
      
 
