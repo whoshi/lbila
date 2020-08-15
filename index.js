@@ -54,6 +54,7 @@ $(function () {
        	    
        while(islinedisp < 1){
 	    const linedispname = document.linedispform.linedispname.value;
+	       
 	    //if(linedispname == 'LINE DISPNAME'){
             //sleep(500);
 		    
