@@ -46,10 +46,10 @@ function getprofile(){
     var msg;
     liff.getProfile()
     .then(profile => {
-      msg = profile.displayName
+      msg = profile.displayName;
     })
     .catch((err) => {
-      window.alert('getprofile error', err)
+      window.alert('getprofile error', err);
     })
     
     return msg;
