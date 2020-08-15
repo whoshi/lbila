@@ -2,6 +2,14 @@ $(function () {
     
     // 送信
     $('form').submit(function () {
+      liff.getProfile().then(profile => {
+
+      // プロフィール名
+      const name = profile.displayName
+
+     // HTMLに挿入
+      document.linedispform.linedispname.value = name;
+      });
       var customername = document.getElementById("input_customername").value;
       var hearing = document.getElementById("input_hearing").value;
       var memo = document.getElementById("input_memo").value;
@@ -47,7 +55,7 @@ $(function () {
       
       
       //alert(getdisplayname());
-      	    
+      /*	    
       liff.getProfile().then(profile => {
 
       // プロフィール名
@@ -56,7 +64,7 @@ $(function () {
      // HTMLに挿入
       document.linedispform.linedispname.value = name;
       });
-      
+      */
        //const linedispname = document.linedispform.linedispname.value;
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
