@@ -52,8 +52,8 @@ $(function () {
      // HTMLに挿入
      document.getElementById("linedispnamearea").innerText = name;
       });
-       var linedispname  = document.getElementById("linedispnamearea");   
-       alert(linedispname);
+       //var linedispname  = document.getElementById("linedispnamearea");   
+       //alert(linedispname);
 
       var JSONdata = {
                     nowdate:nowdate,
