@@ -41,6 +41,17 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
 }
+function getprofile(){
+     liff.getProfile().then(function (profile) {
+        
+        
+        alert(profile.displayName);
+        
+       }).catch(function (error) {
+        window.alert("Error getting profile: " + error);
+       });	   
+    
+}
 
 
 // Webブラウザからメッセージ送信
