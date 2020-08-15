@@ -42,18 +42,18 @@ $(function () {
       //getprofile();
 	    
       
- 
+      const name = "xxxx";
       //alert(getdisplayname());
       liff.getProfile().then(profile => {
 
         // プロフィール名
-        const name = profile.displayName
+        name = profile.displayName
 
         // HTMLに挿入
         //document.querySelector("#name").innerText = name
-	alert(name);
+	
        })
-	    
+      alert(name);
      
 
       var JSONdata = {
