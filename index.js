@@ -49,14 +49,15 @@ $(function () {
 				datecurrent.getSeconds() + "秒";
         
       var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
-       var linedispname = "";	    
-       while(1){
+       var linedispname = "";	
+       let islinedisp = 0;
+       while(islinedisp < 1){
 	    linedispname = document.linedispform.linedispname.value;
 	    if(linedispname == 'LINE DISPNAME'){
 		    sleep(500);
 		    
 	    }else{
-		   break; 
+		   islinedisp = 1;
 	    }
 	       
 	       
