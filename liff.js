@@ -48,13 +48,17 @@ function getprofile(){
     liff.getProfile()
     .then(profile => {
       msg = profile.displayName;
-      window.alert(msg);
+      //window.alert(msg);
       //return profile.displayName;
     })
     .catch((err) => {
       window.alert('getprofile error', err);
     })
    
+}
+function getdisplayname(){
+    
+    return msg;
 }
 
 
