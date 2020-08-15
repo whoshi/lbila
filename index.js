@@ -65,7 +65,7 @@ $(function () {
        //var linedispname  = document.getElementById("linedispnamearea");   
        //var linedispname = document.getElementById("linedispnamearea");
        //var dispname  = document.linedispnamearea.value;
-       alert(linedispname);
+       //alert(linedispname);
 
       var JSONdata = {
                     nowdate:nowdate,
