@@ -46,6 +46,7 @@ $(function () {
       const name = profile.displayName
       var JSONdata = {
                     nowdate:nowdate,
+	            dispname:name,
                     customername: customername,
                     hearing: hearing,
                     memo: memo ,
