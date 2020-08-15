@@ -48,13 +48,13 @@ function getprofile(){
     .then(profile => {
       msg = profile.displayName;
       window.alert(profile.displayName);
-      
+      return profile.displayName;
     })
     .catch((err) => {
       window.alert('getprofile error', err);
     })
-    window.alert(msg);
-    return msg;
+    //window.alert(msg);
+    //return msg;
 }
 
 
