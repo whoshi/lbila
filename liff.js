@@ -3,15 +3,7 @@ $(document).ready(function () {
     // LINE DevelopersのLIFF画面より確認可能
     var liffId = "1654689972-a3rzGmrE";
     initializeLiff(liffId);
-    liff.getProfile().then(profile => {
-
-        // プロフィール名
-        const name = profile.displayName
-
-        // HTMLに挿入
-        document.querySelector("#name").innerText = name
-	
-       });
+    getprofile();
     
 })
 var msg = "";
@@ -56,9 +48,10 @@ function getprofile(){
     
     liff.getProfile()
     .then(profile => {
-      msg = profile.displayName;
-      //window.alert(msg);
-      //return profile.displayName;
+      
+	    
+      // HTMLに挿入
+      document.querySelector("#name").innerText = profile.displayName;
     })
     .catch((err) => {
       window.alert('getprofile error', err);
