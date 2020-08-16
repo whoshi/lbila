@@ -22,7 +22,7 @@ $(function () {
           }
       }
      
-      var inputdata = 【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
+      var inputdata = "【顧客名】" + "\n" + customername + "\n" + "【ヒヤリング内容】" + "\n" + hearing + "\n";
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
