@@ -40,45 +40,44 @@ function sendMessages(text) {
   "altText": "Flex Message",
   "contents": {
     "type": "bubble",
-    "body": {
+    "header": {
       "type": "box",
-      "layout": "vertical",
-      "spacing": "md",
+      "layout": "horizontal",
       "contents": [
         {
           "type": "text",
           "text": "登録しました",
-          "size": "xl",
+          "size": "lg",
           "align": "center",
-          "gravity": "center",
           "weight": "bold",
-          "color": "#1A30E8",
-          "wrap": true
-        },
+          "color": "#136CD4"
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "horizontal",
+      "spacing": "md",
+      "contents": [
         {
           "type": "box",
           "layout": "vertical",
-          "spacing": "sm",
-          "margin": "lg",
+          "flex": 2,
           "contents": [
             {
-              "type": "box",
-              "layout": "vertical",
-              "margin": "xxl",
-              "contents": [
-                {
-                  "type": "spacer"
-                },
-                {
-                  "type": "text",
-                  "text": text,
-                  "margin": "xxl",
-                  "size": "lg",
-                  "align": "start",
-                  "color": "#D81414",
-                  "wrap": true
-                }
-              ]
+              "type": "separator"
+            },
+            {
+              "type": "text",
+              "text": text,
+              "flex": 2,
+              "size": "lg",
+              "align": "start",
+              "gravity": "center",
+              "color": "#810808"
+            },
+            {
+              "type": "separator"
             }
           ]
         }
