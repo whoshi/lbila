@@ -37,6 +37,9 @@ function sendMessages(text) {
     liff.sendMessages([{
         "type": "flex",
   "altText": "Flex Message",
+  "contents": [{
+  "type": "flex",
+  "altText": "Flex Message",
   "contents": {
     "type": "bubble",
     "direction": "ltr",
@@ -58,8 +61,8 @@ function sendMessages(text) {
       "layout": "vertical",
       "contents": [
         {
-          "type": text,
-          "text": "あああああああああああっっっｘ",
+          "type": "text",
+          "text": text,
           "align": "center"
         }
       ]
@@ -73,7 +76,7 @@ function sendMessages(text) {
       }
     }
   }
-    }]).then(function () {
+}]).then(function () {
         liff.closeWindow();
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
