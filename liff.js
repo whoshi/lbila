@@ -37,6 +37,49 @@ function sendText(text) {
 
 function sendMessages(text) {
     liff.sendMessages([{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "hero": {
+      "type": "image",
+      "url": "https://drive.google.com/uc?export=view&id=1kc5eGaHbaZTsTSe4G73djS-KCrh9JIXH&usp=sharing",
+      "align": "start",
+      "size": "full",
+      "aspectRatio": "20:10",
+      "aspectMode": "fit",
+      "gravity": "center",
+      "backgroundColor": "#7FFFD4"
+     },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": モバイルメモを登録しました",
+          "size": "md",
+          "weight": "bold",
+          "color": "#00008B"
+        },
+        {
+          "type": "text",
+          "text": '\n' + text,
+          "wrap": true,
+           "color": "#808080"
+        }
+      ]
+    }
+  }
+}]).then(function () {
+        liff.closeWindow();
+    }).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
+/*
+function sendMessages(text) {
+    liff.sendMessages([{
         'type': 'text',
         'text': text
     }]).then(function () {
@@ -45,7 +88,7 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
 }
-
+*/
 // Webブラウザからメッセージ送信
 function shareTargetPicker(text) {
     liff.shareTargetPicker([{
