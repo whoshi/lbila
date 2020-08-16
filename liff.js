@@ -76,7 +76,7 @@ function sendMessages(text) {
       }
     }
   }
-}]).then(function () {
+]).then(function () {
         liff.closeWindow();
     }).catch(function (error) {
         window.alert('Failed to send message ' + error);
