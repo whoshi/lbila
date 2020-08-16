@@ -35,44 +35,44 @@ function sendText(text) {
 // LINEトーク画面上でメッセージ送信
 function sendMessages(text) {
     liff.sendMessages([{
-        "type": "flex",
-  "altText": "Flex Message",
-  "contents": [{
-  "type": "flex",
-  "altText": "Flex Message",
-  "contents": {
-    "type": "bubble",
-    "direction": "ltr",
-    "header": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
+        'type': 'flex',
+  'altText': 'Flex Message',
+  'contents': [{
+  'type': 'flex',
+  'altText': 'Flex Message',
+  'contents': {
+    'type': 'bubble',
+    'direction': 'ltr',
+    'header': {
+      'type': 'box',
+      'layout': 'vertical',
+      'contents': [
         {
-          "type": "text",
-          "text": "登録しました",
-          "flex": 1,
-          "align": "center",
-          "color": "#1B367B"
+          'type': 'text',
+          'text': '登録しました',
+          'flex': 1,
+          'align': 'center',
+          'color': '#1B367B'
         }
       ]
     },
-    "body": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
+    'body': {
+      'type': 'box',
+      'layout': 'vertical',
+      'contents': [
         {
-          "type": "text",
-          "text": text,
-          "align": "center"
+          'type': 'text',
+          'text': text,
+          'align': 'center'
         }
       ]
     },
-    "styles": {
-      "header": {
-        "backgroundColor": "#EBE3EC"
+    'styles': {
+      'header': {
+        'backgroundColor': '#EBE3EC'
       },
-      "body": {
-        "backgroundColor": "#F6EFEB"
+      'body': {
+        'backgroundColor': '#F6EFEB'
       }
     }
   }
