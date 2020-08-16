@@ -40,9 +40,10 @@ function sendMessages(text) {
   "altText": "Flex Message",
   "contents": {
     "type": "bubble",
+    "direction": "ltr",
     "header": {
       "type": "box",
-      "layout": "horizontal",
+      "layout": "vertical",
       "contents": [
         {
           "type": "text",
@@ -50,36 +51,20 @@ function sendMessages(text) {
           "size": "lg",
           "align": "center",
           "weight": "bold",
-          "color": "#136CD4"
+          "color": "#340AD9"
         }
       ]
     },
     "body": {
       "type": "box",
-      "layout": "horizontal",
-      "spacing": "md",
+      "layout": "vertical",
       "contents": [
         {
-          "type": "box",
-          "layout": "vertical",
-          "flex": 2,
-          "contents": [
-            {
-              "type": "separator"
-            },
-            {
-              "type": "text",
-              "text": text,
-              "flex": 2,
-              "size": "lg",
-              "align": "start",
-              "gravity": "center",
-              "color": "#810808"
-            },
-            {
-              "type": "separator"
-            }
-          ]
+          "type": "text",
+          "text": text,
+          "size": "lg",
+          "align": "start",
+          "color": "#BF0202"
         }
       ]
     }
