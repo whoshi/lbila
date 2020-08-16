@@ -47,17 +47,11 @@ function sendMessages(text) {
       "contents": [
         {
           "type": "text",
-          "text": "Header",
-          "align": "center"
+          "text": "登録しました",
+          "align": "center",
+          "color": "#340AD9"
         }
       ]
-    },
-    "hero": {
-      "type": "image",
-      "url": "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
-      "size": "full",
-      "aspectRatio": "1.51:1",
-      "aspectMode": "fit"
     },
     "body": {
       "type": "box",
@@ -65,22 +59,8 @@ function sendMessages(text) {
       "contents": [
         {
           "type": "text",
-          "text": "Body",
-          "align": "center"
-        }
-      ]
-    },
-    "footer": {
-      "type": "box",
-      "layout": "horizontal",
-      "contents": [
-        {
-          "type": "button",
-          "action": {
-            "type": "uri",
-            "label": "Button",
-            "uri": "https://linecorp.com"
-          }
+          "text": text,
+          "align": "start"
         }
       ]
     }
