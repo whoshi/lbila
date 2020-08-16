@@ -33,6 +33,57 @@ function sendText(text) {
 }
 
 // LINEトーク画面上でメッセージ送信
+
+function sendMessages(text) {
+    liff.sendMessages([{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "direction": "ltr",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "メモを登録しました",
+          "size": "lg",
+          "align": "center",
+          "weight": "bold",
+          "color": "#340AD9"
+        },
+        {
+          "type": "separator"
+        }
+      ]
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": text,
+          "size": "lg",
+          "align": "start",
+          "gravity": "top",
+          "color": "#BF0202",
+          "wrap": true
+        },
+        {
+          "type": "separator"
+        }
+      ]
+    }
+  }
+}]).then(function () {
+        liff.closeWindow();
+    }).catch(function (error) {
+        window.alert('Failed to send message ' + error);
+    });
+}
+/*
 function sendMessages(text) {
     liff.sendMessages([{
         'type': 'text',
@@ -43,7 +94,7 @@ function sendMessages(text) {
         window.alert('Failed to send message ' + error);
     });
 }
-
+*/
 // Webブラウザからメッセージ送信
 function shareTargetPicker(text) {
     liff.shareTargetPicker([{
