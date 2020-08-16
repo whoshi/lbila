@@ -73,7 +73,7 @@ function sendMessages(text) {
                   "type": "text",
                   "text": text,
                   "margin": "xxl",
-                  "size": "xs",
+                  "size": "lg",
                   "align": "start",
                   "color": "#D81414",
                   "wrap": true
