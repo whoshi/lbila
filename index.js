@@ -59,9 +59,16 @@ $(function () {
       JSONdata,
       function(dt){
          //console.log(dt);liff.closeWindow();
+	          if(dt.message == 'success!')
+		  {
+			  liff.closeWindow(); 
+		  }else
+		  {
+			window.alert(dt.message);  
+		  }
 	 
-         window.alert(dt.message);
-	     liff.closeWindow(); 
+         
+	     
 	 
      }
      );
