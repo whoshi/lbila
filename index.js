@@ -64,7 +64,7 @@ $(function () {
 			  liff.closeWindow(); 
 		  }else
 		  {
-			window.alert(dt.message);  
+			window.alert("他の人が操作中です、少し待って再実行して下さい");  
 		  }
 	 
          
