@@ -60,6 +60,7 @@ $(function () {
       function(dt){
          //console.log(dt);
          alert(dt);
+	 window.alert(dt.message);
      }
      );
      
