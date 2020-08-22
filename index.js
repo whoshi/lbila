@@ -58,9 +58,15 @@ $(function () {
      $.post(url,
       JSONdata,
       function(dt){
-         //console.log(dt);
+         //console.log(dt);liff.closeWindow();
+	 if(dt.message == "ロック中"){
+		 window.alert("他の人がアクセス中です、少し待って再実行して下さい！);
+	 }else{
+		liff.closeWindow(); 
+		 
+	 }
          
-	 window.alert(dt.message);
+	 
      }
      );
      
