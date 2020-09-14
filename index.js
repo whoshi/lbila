@@ -68,14 +68,14 @@ $(function () {
 	          //インジケータ除去
 	          // Loading 画像を消す
                   //removeLoading();
-	          //if(dt.message == 'success!')
-		  //{
+	          if(dt.message == 'success!')
+		  {
 			  sendText(inputdata);//To LINE 送信
 			  liff.closeWindow(); 
-		  //}else
-		  //{
-		//	window.alert("他の人が操作中です、少し待って再実行して下さい");  
-		  //}
+		  }else
+		  {
+			window.alert("他の人が操作中です、少し待って再実行して下さい");  
+		  }
 	 
          
 	     
