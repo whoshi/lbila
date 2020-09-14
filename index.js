@@ -59,7 +59,7 @@ $(function () {
      //スピナー表示
      //インジケータ表示
      // Loading 画像を表示
-     dispLoading("データ暗号化処理中...");
+     //dispLoading("データ暗号化処理中...");
 	      
      $.post(url,
       JSONdata,
@@ -67,15 +67,15 @@ $(function () {
          //console.log(dt);liff.closeWindow();
 	          //インジケータ除去
 	          // Loading 画像を消す
-                  removeLoading();
-	          if(dt.message == 'success!')
-		  {
+                  //removeLoading();
+	          //if(dt.message == 'success!')
+		  //{
 			  sendText(inputdata);//To LINE 送信
 			  liff.closeWindow(); 
-		  }else
-		  {
-			window.alert("他の人が操作中です、少し待って再実行して下さい");  
-		  }
+		  //}else
+		  //{
+		//	window.alert("他の人が操作中です、少し待って再実行して下さい");  
+		  //}
 	 
          
 	     
