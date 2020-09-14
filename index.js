@@ -37,7 +37,7 @@ $(function () {
 				datecurrent.getSeconds() + "秒";
         
       //var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
-      
+      var url = 'https://script.google.com/macros/s/AKfycbyZCPemsZEO01buDDevsEWfs8LbvTIIJdGBHMyNi-HW9l9sK4E/exec'
       //var dispname = document.getElementById('id_linedisp');
       //alert(dispname);
       liff.getProfile().then(profile => {
