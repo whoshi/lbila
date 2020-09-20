@@ -3,13 +3,12 @@ $(function () {
     // 送信
     $('form').submit(function () {
       
-      var customername = document.getElementById("input_customername").value;
-      var hearing = document.getElementById("input_hearing").value;
-      var memo = document.getElementById("input_memo").value;
+      var speach1 = document.getElementById("input_speach1").value;
+      var speach2 = document.getElementById("input_speach2").value;
+      
     
       var element = document.getElementById( "myForm" ) ;
-      var radioNodeList = element.category ;
-      var category = radioNodeList.value ;
+      
       var actionselect = element.action;
       var robohonaction = actionselect.value;
       var songselect = element.song;
@@ -17,21 +16,27 @@ $(function () {
       var danceselect = element.dance;
       var robohondance = danceselect.value;
         
-      if(customername === ''){
-          if(hearing === ''){
-              if(memo === ''){
-                  if(category === ''){
-                      alert('メモ入力が何もありません');
-                      return false;
+      if(speach1 === ''){
+          if(speach2 === ''){
+              
+                  if(robohonaction === ''){
+		      if(robohonsong === ''){
+			 if(robohondance === ''){
+			    alert('メモ入力が何もありません');
+                      return false;	 
+			 }
+			      
+		      }
+                      
                   }
-              }
+              
           }
       }
      
       //var inputdata = "【タイトル】" + "\n" + customername + "\n" + "【事の背景経緯】" + "\n" + hearing + "\n";
       //inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction  ;
-      var inputdata = "【タイトル】" + "\n" + customername + "\n";
-      inputdata = inputdata + "【RoBoHoNアクション】" + "\n" + robohonaction +  "\n" + "【RoBoHoNソング】" + "\n" + robohonsong + "\n" + "【RoBoHoNダンス】" + "\n" + robohondance  ;	    
+      var inputdata = "【発話内容1】" + "\n" + speach1 + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction +  "\n" + "【RoBoHoNソング】" + "\n" + robohonsong;
+      inputdata = inputdata  + "\n" + "【RoBoHoNダンス】" + "\n" + robohondance + "【発話内容2】" + "\n" + speach2 ;	    
       
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
@@ -55,11 +60,11 @@ $(function () {
       const name = profile.displayName
       var JSONdata = {
                     nowdate:nowdate,
-	            dispname:name,
-                    customername: customername,
-                    hearing: hearing,
-                    memo: memo ,
-                    category: category 
+	            speach1:speach1,
+                    action: robohonaction,
+                    song: robohonsong,
+                    dance: robohondance ,
+                    speach2: speach2 
        };
 
      //alert(JSON.stringify(JSONdata));
