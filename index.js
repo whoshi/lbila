@@ -35,8 +35,8 @@ $(function () {
      
       //var inputdata = "【タイトル】" + "\n" + customername + "\n" + "【事の背景経緯】" + "\n" + hearing + "\n";
       //inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction  ;
-      var inputdata = "【発話内容1】" + "\n" + speach1 + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction +  "\n" + "【RoBoHoNソング】" + "\n" + robohonsong;
-      inputdata = inputdata  + "\n" + "【RoBoHoNダンス】" + "\n" + robohondance + "\n"　+ "【発話内容2】" + "\n" + speach2 ;	    
+      var inputdata = "【発話内容1】" + "\n" + speach1 + "\n" + "【アクション】" + "\n" + robohonaction +  "\n" + "【ソング】" + "\n" + robohonsong;
+      inputdata = inputdata  + "\n" + "【ダンス】" + "\n" + robohondance + "\n"　+ "【発話内容2】" + "\n" + speach2 ;	    
       
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
