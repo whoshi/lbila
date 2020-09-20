@@ -10,7 +10,7 @@ $(function () {
       var element = document.getElementById( "myForm" ) ;
       var radioNodeList = element.category ;
       var category = radioNodeList.value ;
-      //var actionselect = element.action
+      //var actionselect = element.action;
       //var robohonaction = actionselect.value;
         
       if(customername === ''){
@@ -28,7 +28,7 @@ $(function () {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category  ;
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
-      sendText(inputdata);//To LINE 送信
+      //sendText(inputdata);//To LINE 送信
       
       const datecurrent = new Date();
       const nowdate = datecurrent.getFullYear() + "年" + 
@@ -63,7 +63,7 @@ $(function () {
      // Loading 画像を表示
      //dispLoading("データ暗号化処理中...");
 
-     /*	      
+           
      $.post(url,
       JSONdata,
       function(dt){
@@ -87,7 +87,7 @@ $(function () {
      );
      
       });
-      */
+      
       
       
       
