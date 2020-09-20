@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>メモフォーム</title>
+    <title>ロボホンGOGO</title>
   
     <style type="text/css">    
     body{
@@ -37,43 +37,26 @@
 <body>
     
 <h1>
-<font size="10" color="#666666">メモメモ</font>
+<font size="10" color="#666666">ロボホンGOGO!</font>
 </h1>
 <h2>
-<font size="5" color="#aaaaaa">LBILA Mobile Memo for LIFF 0100 Edition</font>
+<font size="5" color="#aaaaaa">RoBoHoN Contril for LIFF 0100 Edition</font>
 </h2>
 
 <div class="container">
     
     <form class="formmemo" id="myForm"onsubmit="myFormSubmit(this);">  
         <div class="formmemo-group">
-            <label class="formmemo-label" for="input_customername">タイトル</label>
+            <label class="formmemo-label" for="input_customername">ロボホンに喋らせる1</label>
            
             <div class="formmemo-data">
                 <div style="margin-left:0%;margin-right:10%;">
-                <textarea name="customername" cols="35" rows="2" id="input_customername" placeholder="例：コロッケそば"></textarea>
+                <textarea name="speach1" cols="35" rows="2" id="input_customername" placeholder="例：こんちは！僕、ロボホン！"></textarea>
                 </div>
             </div>
            
         </div>
-        
-        <div class="formmemo-group">
-            <label class="formmemo-label" for="input_hearing">事の背景経緯</label>
-            <div class="formmemo-data">
-                <div style="margin-left:0%;margin-right:5%;">
-                <textarea name="hearing" cols="35" rows="10" id="input_hearing" placeholder="例：IoTセンサーの情報をLINE通知できないかの相談"></textarea>
-               </div>
-            </div>
-        </div>
-        
-        <div class="formmemo-group">
-            <label class="formmemo-label" for="input_memo">メモ</label>
-            <div class="formmemo-data">
-                <div style="margin-left:0%;margin-right:5%;">
-                <textarea name="memo" cols="35" rows="10" id="input_memo" placeholder="例：LINE botとLIFFによるLINE内アプリの技術が必要"></textarea>
-               </div>
-            </div>
-        </div>
+       
         <div class="form-group">
             <label class="formaction">アクション</label>
             <div class="col-xs-9">
@@ -187,24 +170,14 @@
             </div>
         </div>
         <div class="formmemo-group">
-                         <label class="formmemo-label">メモ分類</label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio"  name="category" id="input_category" value="テレワーク" >テレワーク
-                        </label>
-                    
-                        <label class="radio-inline">
-                            <input type="radio" name="category" id="input_category" value="DX（IoT/AI/ロボット/etc）" >DX（IoT/AI/ロボット/etc）
-                        </label>
-                       <br><br>
-                        <label class="radio-inline">
-                            <input type="radio" name="category" id="input_category" value="アフター/ウィズ コロナ" >アフター/ウィズ コロナ
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="category" id="input_category" value="アイディア/その他" >アイディア/その他
-                        </label>
-                    </div>
-         </div>
+            <label class="formmemo-label" for="input_memo">ロボホンに喋らせる2</label>
+            <div class="formmemo-data">
+                <div style="margin-left:0%;margin-right:5%;">
+                <textarea name="speach2" cols="35" rows="10" id="input_memo" placeholder="例：僕のダンスはどうだった？"></textarea>
+               </div>
+            </div>
+        </div>
+       
          <br><br>
          <div class="formmemo-group">
             <div class="formmemo-button">
