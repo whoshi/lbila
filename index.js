@@ -28,7 +28,7 @@ $(function () {
       inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category  + "【ロボホンアクション】" + "\n" + robohonaction;
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
-      //sendText(inputdata);//To LINE 送信
+      sendText(inputdata);//To LINE 送信
       
       const datecurrent = new Date();
       const nowdate = datecurrent.getFullYear() + "年" + 
