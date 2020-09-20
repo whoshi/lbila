@@ -22,7 +22,7 @@ $(function () {
                   if(robohonaction === ''){
 		      if(robohonsong === ''){
 			 if(robohondance === ''){
-			    alert('メモ入力が何もありません');
+			    alert('入力が何もありません');
                       return false;	 
 			 }
 			      
