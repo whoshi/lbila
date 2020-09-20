@@ -10,6 +10,8 @@ $(function () {
       var element = document.getElementById( "myForm" ) ;
       var radioNodeList = element.category ;
       var category = radioNodeList.value ;
+      var actionselect = element.action
+      var robohonaction = actionselect.value;
         
       if(customername === ''){
           if(hearing === ''){
@@ -23,7 +25,7 @@ $(function () {
       }
      
       var inputdata = "【タイトル】" + "\n" + customername + "\n" + "【事の背景経緯】" + "\n" + hearing + "\n";
-      inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category;
+      inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category  + "【ロボホンアクション】" + "\n" + robohonaction;
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
       //sendText(inputdata);//To LINE 送信
@@ -60,7 +62,8 @@ $(function () {
      //インジケータ表示
      // Loading 画像を表示
      //dispLoading("データ暗号化処理中...");
-	      
+
+     /*	      
      $.post(url,
       JSONdata,
       function(dt){
@@ -84,6 +87,10 @@ $(function () {
      );
      
       });
+      */
+      
+      
+      
       /*	   
       var JSONdata = {
                     nowdate:nowdate,
