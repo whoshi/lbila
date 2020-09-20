@@ -47,7 +47,7 @@ function sendMessages(text) {
       "contents": [
         {
           "type": "text",
-          "text": "メモを登録しました",
+          "text": "ロボホンに送信しました",
           "size": "lg",
           "align": "center",
           "weight": "bold",
