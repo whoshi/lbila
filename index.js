@@ -31,7 +31,7 @@ $(function () {
       //var inputdata = "【タイトル】" + "\n" + customername + "\n" + "【事の背景経緯】" + "\n" + hearing + "\n";
       //inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction  ;
       var inputdata = "【タイトル】" + "\n" + customername + "\n";
-      //inputdata = inputdata + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction "\n" + "【RoBoHoNソング】" + "\n" + robohonsong "\n" + "【RoBoHoNダンス】" + "\n" + robohondance  ;	    
+      inputdata = inputdata + "【RoBoHoNアクション】" + "\n" + robohonaction +  "\n" + "【RoBoHoNソング】" + "\n" + robohonsong + "\n" + "【RoBoHoNダンス】" + "\n" + robohondance  ;	    
       
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
