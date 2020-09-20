@@ -25,7 +25,7 @@ $(function () {
       }
      
       var inputdata = "【タイトル】" + "\n" + customername + "\n" + "【事の背景経緯】" + "\n" + hearing + "\n";
-      inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category + "【RoBoHoNアクション】" + "\n" + robohonaction  ;
+      inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction  ;
       
       //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
       //sendText(inputdata);//To LINE 送信
