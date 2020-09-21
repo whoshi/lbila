@@ -1,7 +1,9 @@
-$(function () {
+$(function () 
+{
     
     // 送信
-    $('form').submit(function () {
+    $('form').submit(function () 
+    {
       
       var speach1 = document.getElementById("input_speach1").value;
       var speach2 = document.getElementById("input_speach2").value;
@@ -16,32 +18,28 @@ $(function () {
       var danceselect = element.dance;
       var robohondance = danceselect.value;
         
-      if(speach1 === ''){
-          if(speach2 === ''){
-              
-                  if(robohonaction === ''){
-		      if(robohonsong === ''){
-			 if(robohondance === ''){
-			    alert('入力が何もありません');
-                      return false;	 
-			 }
-			      
-		      }
-                      
-                  }
-              
-          }
+      if(speach1 === '')
+      {
+         if(speach2 === '')
+         {
+           if(robohonaction === '')
+           {
+              if(robohonsong === '')
+              {
+	        if(robohondance === '')
+                {
+	          alert('入力が何もありません');
+                  return false;	 
+	        }
+              }
+           }
+         }
       }
      
-      //var inputdata = "【タイトル】" + "\n" + customername + "\n" + "【事の背景経緯】" + "\n" + hearing + "\n";
-      //inputdata = inputdata + "【メモ】" + "\n"　+ memo + "\n" + "【メモ分類】" + "\n" + category + "\n" + "【RoBoHoNアクション】" + "\n" + robohonaction  ;
+      
       var inputdata = "【発話内容1】" + "\n" + speach1 + "\n" + "【アクション】" + "\n" + robohonaction +  "\n" + "【ソング】" + "\n" + robohonsong;
       inputdata = inputdata  + "\n" + "【ダンス】" + "\n" + robohondance + "\n"　+ "【発話内容2】" + "\n" + speach2 ;	    
-      
-      
-      //postより先にsendtextしてGASスプレッドシートにLINE表示名を設定する。  
-      //sendText(inputdata);//To LINE 送信
-      
+      //現在日時取得
       const datecurrent = new Date();
       const nowdate = datecurrent.getFullYear() + "年" + 
 				(datecurrent.getMonth() + 1)  + "月" + 
@@ -50,26 +48,21 @@ $(function () {
 				datecurrent.getMinutes() + "分" + 
 				datecurrent.getSeconds() + "秒";
         
-      //var url = 'https://script.google.com/macros/s/AKfycbw6elowD1ut9p7iUxwcG9i8ov3ONKYCMeQ4mjei7ZsPytppZrmr/exec';
+     //GAS側Postイベントエントリ
       var url = 'https://script.google.com/macros/s/AKfycbyZCPemsZEO01buDDevsEWfs8LbvTIIJdGBHMyNi-HW9l9sK4E/exec'
-      //var dispname = document.getElementById('id_linedisp');
-      //alert(dispname);
+      
       liff.getProfile().then(profile => {
-
-      // プロフィール名
-      const name = profile.displayName
-      var JSONdata = {
-                    nowdate:nowdate,
-	            speach1:speach1,
-                    action: robohonaction,
-                    song: robohonsong,
-                    dance: robohondance ,
-                    speach2: speach2 
-       };
-
-     //alert(JSON.stringify(JSONdata));
-     // {"cd":"100", "name":"Taro"},
-	      
+                                // プロフィール名
+                                const name = profile.displayName
+                                var JSONdata = {
+                                                             nowdate:nowdate,
+	                                             speach1:speach1,
+                                                             action: robohonaction,
+                                                             song: robohonsong,
+                                                             dance: robohondance ,
+                                                             speach2: speach2 
+                                                           };
+     });       
      //スピナー表示
      //インジケータ表示
      // Loading 画像を表示
@@ -77,52 +70,25 @@ $(function () {
 
            
      $.post(url,
-      JSONdata,
-      function(dt){
-         //console.log(dt);liff.closeWindow();
-	          //インジケータ除去
-	          // Loading 画像を消す
-                  removeLoading();
-	          if(dt.message == 'success!')
-		  {
-			  sendText(inputdata);//To LINE 送信
-			  liff.closeWindow(); 
-		  }else
-		  {
-			window.alert("他の人が操作中です、少し待って再実行して下さい");  
-		  }
-	 
-         
-	     
-	 
-     }
-     );
+            JSONdata,
+            function(dt)
+            {
+	        //インジケータ除去
+	        // Loading 画像を消す
+                removeLoading();
+	        if(dt.message == 'success!')
+	        {
+                   sendText(inputdata);//To LINE 送信
+	           liff.closeWindow(); 
+	        }else
+	        {
+		   window.alert("他の人が操作中です、少し待って再実行して下さい");  
+                }
+	    }
+      );
      
-      });
+      //});
       
-      
-      
-      
-      /*	   
-      var JSONdata = {
-                    nowdate:nowdate,
-                    customername: customername,
-                    hearing: hearing,
-                    memo: memo ,
-                    category: category 
-       };
-     //alert(JSON.stringify(JSONdata));
-     // {"cd":"100", "name":"Taro"},
-     $.post(url,
-      JSONdata,
-      function(dt){
-         //console.log(dt);
-         //alert(dt);
-     }
-     );
-     */
-        //sendText(inputdata);//To LINE 送信
-      
-        return false;
+      return false;
     });
 });
