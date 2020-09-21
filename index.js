@@ -9,11 +9,11 @@ $(function ()
       var speach2 = document.getElementById("input_speach2").value;
       if(speach1 == '')
       {
-	 speach1 = "nodate";     
+	 speach1 = "nodata";     
       }
       if(speach2 == '')
       {
-	 speach2 = "nodate";     
+	 speach2 = "nodata";     
       }
       
     
