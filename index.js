@@ -17,7 +17,7 @@ $(function ()
       var robohonsong = songselect.value;
       var danceselect = element.dance;
       var robohondance = danceselect.value;
-        
+      //入力チェック  
       if(speach1 === '')
       {
          if(speach2 === '')
@@ -54,42 +54,41 @@ $(function ()
       liff.getProfile().then
       (profile => 
         {
-                        // プロフィール名
-                        const name = profile.displayName
-                        var JSONdata = {
-                                         nowdate:nowdate,
-	                                 speach1:speach1,
-                                         action: robohonaction,
-                                         song: robohonsong,
-                                         dance: robohondance ,
-                                         speach2: speach2 
-                                        };
+                 // プロフィール名
+                 const name = profile.displayName
+                 var JSONdata = {
+                                   nowdate:nowdate,
+	                           speach1:speach1,
+                                   action: robohonaction,
+                                   song: robohonsong,
+                                   dance: robohondance ,
+                                   speach2: speach2 
+                                 };
             
-                       //スピナー表示
-                       //インジケータ表示
-                       // Loading 画像を表示
-                       dispLoading("ロボホンに送信中...");
+                 //スピナー表示
+                 //インジケータ表示
+                 // Loading 画像を表示
+                 dispLoading("ロボホンに送信中...");
 
-           
-                      $.post(url,
-                             JSONdata,
-                             function(dt)
-                             {
-	                        //インジケータ除去
-	                        // Loading 画像を消す
-                               removeLoading();
-	                       if(dt.message == 'success!')
-	                       {
-                                 sendText(inputdata);//To LINE 送信
-	                         liff.closeWindow(); 
-	                       }else
-	                       {
-		                  window.alert("他の人が操作中です、少し待って再実行して下さい");  
-                               }
-	                     }
-                       );
+                 $.post(url,
+                        JSONdata,
+                        function(dt)
+                        {
+	                   //インジケータ除去
+	                   // Loading 画像を消す
+                           removeLoading();
+	                   if(dt.message == 'success!')
+	                   {
+                               sendText(inputdata);//To LINE 送信
+	                       liff.closeWindow(); 
+	                   }else
+	                   {
+		               window.alert("他の人が操作中です、少し待って再実行して下さい");  
+                           }
+	                }
+                 );
      
-       }
+        }
       );
       
       return false;
