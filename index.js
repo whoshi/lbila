@@ -16,7 +16,24 @@ $(function ()
       //alert('ActionIndex ' + actionindex);
       var robohonaction = actionselect.value;
       var songselect = element.song;
-      var songindex = songselect.selectedIndex	    
+      var songindex = songselect.selectedIndex	  
+      switch (songindex)
+      {
+            case 22:
+                 songindex = 101;
+                 break;
+            case 23:
+                 songindex = 102;
+                 break;
+            case 24:
+                 songindex = 103;
+                 break;
+            case 25:
+                 songindex = 104;
+                 break;		      
+            default:
+                 break;;
+      }
       var robohonsong = songselect.value;
       var danceselect = element.dance;
       var danceindex = danceselect.selectedIndex		    
