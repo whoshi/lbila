@@ -62,7 +62,7 @@ $(function ()
                                                              dance: robohondance ,
                                                              speach2: speach2 
                                                            };
-     });       
+            
      //スピナー表示
      //インジケータ表示
      // Loading 画像を表示
@@ -87,7 +87,7 @@ $(function ()
 	    }
       );
      
-      //});
+      });
       
       return false;
     });
