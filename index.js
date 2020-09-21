@@ -13,12 +13,13 @@ $(function ()
       
       var actionselect = element.action;
       var actionindex = actionselect.selectedIndex
-      alert('ActionIndex ' + actionindex);
-	    
+      //alert('ActionIndex ' + actionindex);
       var robohonaction = actionselect.value;
       var songselect = element.song;
+      var songindex = songselect.selectedIndex	    
       var robohonsong = songselect.value;
       var danceselect = element.dance;
+      var danceindex = danceselect.selectedIndex		    
       var robohondance = danceselect.value;
       //入力チェック  
       if(speach1 === '')
@@ -62,9 +63,9 @@ $(function ()
                  var JSONdata = {
                                    nowdate:nowdate,
 	                           speach1:speach1,
-                                   action: robohonaction,
-                                   song: robohonsong,
-                                   dance: robohondance ,
+                                   action: actionindex,
+                                   song: songindex ,
+                                   dance: danceindex ,
                                    speach2: speach2 
                                  };
             
