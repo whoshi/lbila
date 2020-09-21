@@ -51,7 +51,9 @@ $(function ()
      //GAS側Postイベントエントリ
       var url = 'https://script.google.com/macros/s/AKfycbyZCPemsZEO01buDDevsEWfs8LbvTIIJdGBHMyNi-HW9l9sK4E/exec'
       
-      liff.getProfile().then(profile => {
+      liff.getProfile().then
+      (profile => 
+        {
                         // プロフィール名
                         const name = profile.displayName
                         var JSONdata = {
@@ -87,7 +89,8 @@ $(function ()
 	                     }
                        );
      
-      });
+       }
+      );
       
       return false;
     });
