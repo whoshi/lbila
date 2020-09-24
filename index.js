@@ -46,6 +46,9 @@ $(function ()
       var danceselect = element.dance;
       var danceindex = danceselect.selectedIndex		    
       var robohondance = danceselect.value;
+	    
+      var transrateList = element.category ;
+      var transrate = transrateList.value ;
       //入力チェック  
       if(speach1 === '')
       {
@@ -57,8 +60,11 @@ $(function ()
               {
 	        if(robohondance === '')
                 {
-	          alert('入力が何もありません');
-                  return false;	 
+	          if(transrate === '')
+		  {
+	             alert('入力が何もありません');
+                     return false;	   
+		  }	
 	        }
               }
            }
@@ -67,7 +73,7 @@ $(function ()
      
       
       var inputdata = "【発話内容1】" + "\n" + speach1 + "\n" + "【アクション】" + "\n" + robohonaction +  "\n" + "【ソング】" + "\n" + robohonsong;
-      inputdata = inputdata  + "\n" + "【ダンス】" + "\n" + robohondance + "\n"　+ "【発話内容2】" + "\n" + speach2 ;	    
+      inputdata = inputdata  + "\n" + "【ダンス】" + "\n" + robohondance + "\n"　+ "【発話内容2】" + "\n" + speach2 + "【翻訳】" + "\n" + transrate ;	    
       //現在日時取得
       const datecurrent = new Date();
       const nowdate = datecurrent.getFullYear() + "年" + 
@@ -91,7 +97,8 @@ $(function ()
                                    action: actionindex,
                                    song: songindex ,
                                    dance: danceindex ,
-                                   speach2: speach2 
+                                   speach2: speach2, 
+			           transrate: transrate
                                  };
             
                  //スピナー表示
