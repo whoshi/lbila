@@ -50,9 +50,9 @@ $(function ()
       var transrateList = element.category ;
       var transrate = transrateList.value ;
       //入力チェック  
-      if(speach1 === '')
+      if(speach1 === 'nodata')
       {
-         if(speach2 === '')
+         if(speach2 === 'nodata')
          {
            if(robohonaction === '')
            {
