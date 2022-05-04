@@ -105,7 +105,7 @@ $(function ()
                  //インジケータ表示
                  // Loading 画像を表示
                  dispLoading("ロボホンに送信中...");
-
+                 window.alert("GASへPOST");  
                  $.post(url,
                         JSONdata,
                         function(dt)
